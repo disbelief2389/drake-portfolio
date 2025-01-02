@@ -1,0 +1,531 @@
+:root {
+    --main-white: #ffffff;
+    --main-green: rgb(0, 255, 0);
+    --second-green: green;
+    --main-gray: #020302;
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    /*z-index: 1;*/
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    color: #00ff00;
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+    * default document font size = 16px, 1rem = 16px, 100% = 16px
+    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 100%;
+    font-family: monospace;
+    scroll-behavior: smooth;
+    
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+
+    .container {
+        max-width: 65em;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+
+    .container {
+        max-width: 53em;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the video behind other content */
+    overflow: hidden;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    filter: blur(0px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.473); /* Black with 50% opacity */
+    z-index: 1;
+}
+
+.selectable {
+    user-select: text; /* Standard syntax */
+    -webkit-user-select: text; /* Safari and older versions of Chrome */
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* Internet Explorer/Edge */
+}
+
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    min-height: 100vh;
+    background: linear-gradient(
+    160deg,
+    rgb(6, 6, 6),
+    rgb(0, 0, 0)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*body,
+html {
+    overflow: hidden;
+}*/
+
+/* Container class for layout */
+.container {
+    max-width: 1000px;
+    margin: 700px auto;
+    padding: 20px;
+    padding-top: 50px;
+    border: 2px solid #ffffff00;
+    border-radius: 25px;
+    transition: border-color 1.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.container:hover {
+    border-color: #00ff001c;
+}
+
+/* Basic styling for headers */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#welcome-section {
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.norm-weight {
+    font-weight: normal;
+}
+
+/*.title {
+    
+}*/
+
+body {
+    padding-top: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Dark background */
+    padding: 10px 20px; /* Add some padding */
+     /* Add a shadow for depth */
+    z-index: 1100; /* Ensure it's above other content */
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 50%;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.vert-line {
+    width: 20px;
+    height: 100px;
+    border: 1px solid transparent;
+    background: linear-gradient(
+        to top,
+        transparent,
+        transparent,
+        #00ff000e,
+        transparent,
+        transparent
+    );;
+    overflow: hidden;
+}
+
+#flair {
+    position: fixed;
+    z-index: -1;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 5%,
+        green,
+        transparent 95%
+    );
+}
+
+#nav-accent {
+    position: fixed;
+    min-width: 50%;
+    height: 80px;
+    border: 1px solid rgba(0, 255, 0, 0.068);
+    border-bottom: 2px solid transparent;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 0 0 20% 20%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.329),
+        rgba(0, 0, 0, 0.815) 5%,
+        var(--main-gray) 33%,
+        var(--main-gray) 66%,
+        rgba(0, 0, 0, 0.808) 95%,
+        rgba(0, 0, 0, 0.322)
+    );
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.5s ease;
+}
+
+#nav-accent:hover {
+    border-bottom: 2px solid rgba(0, 255, 0, 0.192);
+}
+
+nav ul {
+    list-style: none;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    position: relative; /* Ensure the ul is positioned correctly */
+    z-index: 1101; /* Ensure the nav links are above the navbar */
+    vertical-align: middle;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul li a {
+    color: rgba(0, 128, 0, 0.733);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    letter-spacing: 0.7rem;
+    border: solid 1px transparent;
+    /*ADD PADDING + MARGIN TO CUSTOMISE HOVER HIGHLIGHT SIZE*/
+    transition: border-color 0.1s ease; /* Smooth transition for hover effect */
+    position: relative; /* Ensure the links are positioned correctly */
+    z-index: 1002; /* Ensure the links are above the nav ul */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    border-color: #00ff002c; /* Slightly lighter background on hover */
+    color: rgba(0, 255, 0, 0.582);
+}
+
+#audioPlayer {
+    display: none;
+}
+
+.audio-controls {
+    max-width: 200px;
+    min-width: 199px;
+    min-height: 150px;
+    position: fixed;
+    top: 38%;
+    left: 85%;
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.167);
+    border: 1px inset transparent;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    /* bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.audio-controls:hover {
+    background-color: rgba(0, 0, 0, 0.736);
+    border-color: green;
+    color: green;
+    /* transform: translateY(30px); */
+}
+
+#playPauseBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #00ff0018;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color .2s ease-in-out;
+  }
+  
+#playPauseBtn:hover {
+    color: #00ff00a7;
+}
+
+#currentTrack {
+    color: #00ff001b;
+    font-size: 14px;
+    margin: 10px;
+    transition: color .2s ease-in-out; 
+}
+
+#currentTrack:hover {
+    color: #00ff008f;
+}
+
+#volumeText {
+    font-size: 11px;
+    margin: 10px;
+    color: #00ff0029;
+}
+
+.subtitle {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 2rem;
+    background: linear-gradient(
+        to right,
+        #0083003b,
+        green 20%,
+        rgba(0, 255, 0, 0.568) 80%,
+        #0088001f
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#welcome-text {
+    margin-top: 10rem;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: blur(0px);
+    transition: filter .3s ease-in-out, opacity 0.3s ease;
+}
+
+#welcome-text .title {
+    height: 10%;
+    width: 50%;
+    margin: 2%;
+    margin-bottom: 6rem;
+    padding: auto;
+    font-size: 5rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.14);
+    
+}
+
+.title-a {
+    background: linear-gradient(
+        to right,
+        rgba(0, 255, 0, 0.363),
+        rgb(0, 255, 0)
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 0.8; /* Adjust line height to prevent cutting off */
+    padding-bottom: 100px; /* Add padding if needed */
+}
+
+fieldset {
+    color: green;
+    border-radius: 15px;
+    border-color: #00ff000d;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; /* Adds space between cards */
+    margin: 6rem;
+    transition: border-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+fieldset:hover {
+    border-color: #00ff0034;
+    color: #00ff00;
+}
+
+legend {
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 1rem;
+}
+
+.fieldset-subtitle {
+    font-size: 70%;
+    font-weight: normal;
+    font-style: italic;
+    vertical-align: top;
+    color: green;
+}
+
+section {
+    margin: 3rem auto;
+    z-index: 999;
+    color: green;
+    transition: color .5s ease-in-out;
+}
+
+section:hover {
+    color: #00ff00;
+}
+
+.heading-hr {
+    max-width: 40%;
+    margin: 0 auto;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00ff001c,
+        transparent
+    );
+}
+
+.project-tile {
+    border: 1px solid rgba(0, 128, 0, 0.155);
+    border-radius: 10px;
+    transition: all .1s ease-in-out;
+    margin: 2rem;
+    display: grid;
+    grid-template-rows: 90% 10%; /* Image takes 70%, title takes 30% */
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.project-tile a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: green;
+    transition: color .1s ease;
+}
+
+.project-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.project-tile:hover {
+    cursor: pointer;
+    border-color: rgba(0, 255, 0, 0.452);
+    transform: translateY(-2px);
+}
+
+.project-tile:active {
+    background-color: #00ff00;
+}
+
+.project-tile a:hover {
+    color: #00ff00;
+}
+
+.project-tile a:active {
+    color: black;
+}
+
+a {
+    color: rgb(0, 255, 0);
+}
+
+.tile-heading {
+    height: 30%;
+    font-weight: bold;
+    font-size: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -15px;
+    padding: 1rem;
+}
+
+#v3i1ix {
+    -webkit-text-stroke: 1px transparent;
+    color: var(--main-green);
+    /* Specify the properties to transition */
+    transition: color 175ms ease-in-out, -webkit-text-stroke-color 175ms ease-in-out;
+}
+
+#v3i1ix:hover {
+    color: transparent;
+    -webkit-text-stroke-color: #00ff00;
+}
