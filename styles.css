@@ -3,6 +3,7 @@
     --main-green: rgb(0, 255, 0);
     --second-green: green;
     --main-gray: #020302;
+    background-color: var(--main-gray);
 }
 
 /* Base reset */
