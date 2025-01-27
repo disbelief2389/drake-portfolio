@@ -14,7 +14,7 @@
 // const volumeSlider = document.getElementById('volumeSlider');
 // const playPauseBtn = document.getElementById('playPauseBtn');
 // const playlist = [
-//   { src: './data/audio/deadmau5 - Everything Before.mp3', start: 135, }
+//   { src: 'data/audio/deadmau5 - Everything Before.mp3', start: 135, }
 // ];
 // let currentTrackIndex = 0;
 
