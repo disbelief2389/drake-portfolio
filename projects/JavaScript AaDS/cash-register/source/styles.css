@@ -1,0 +1,150 @@
+/* Remove up and down arrows on number input types */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a base font size and family */
+html {
+    font-size: 16px;
+    font-family: monospace;
+}
+
+/* Style the body */
+body {
+    height: 100vh;
+    line-height: 1.6;
+    color: #556856;
+    background: linear-gradient(160deg, #000000, #111111);
+    padding: 20px;
+}
+
+/* Container class for layout */
+.container {
+    max-width: 500px;
+    margin: 0 15%;
+    padding: 20px;
+    border: 2px solid #ffffff0a;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.container:hover {
+    border-color: #ffffff10;
+}
+
+/* Basic styling for headers */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+#title {
+    color: #fff;
+    width: 100%;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+/* Basic styling for paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Basic styling for links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox utility class */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Grid utility class */
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    background-color: #16882541;
+    color: #ffffffd3;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    border: solid 1px transparent;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    border-color: #008106;
+}
+
+button:active {
+    background-color: #168825;
+    border-color: #008106;
+}
+
+input {
+    color: #fff;
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#change-due {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#change-breakdown p {
+    margin: 5px 0;
+}

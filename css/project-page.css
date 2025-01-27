@@ -1,0 +1,40 @@
+.project-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1000px;
+}
+
+.iframe-container {
+    width: clamp(300px, 100%, 1000px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+figcaption {
+    font-size: clamp(1.5rem, 1vw, 2rem);
+    font-weight: 600;
+    margin: 1rem 0;
+    scale: .75;
+    color: #00800089;
+}
+
+#project-frame {
+    width: 80%;
+    height: clamp(25vh, 50vh, 80vh);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.6;
+    margin: 5rem auto;
+    width: 80%;
+    color: #008000;
+}

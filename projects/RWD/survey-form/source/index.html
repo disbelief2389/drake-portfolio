@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />    
+    <title>Drake's Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Drake's Survey Form</h1>
+      <p id="description">I appreciate the time you are taking to complete this.</p>
+      <form id="survey-form">
+        <label id="name-label" for="name">
+          Name
+        </label><br />
+        <input type="text" id="name" name="name" placeholder="eg. Jane Doe" required /><br />
+        <label id="email-label" for="email">
+          Email
+        </label><br />
+        <input type="email" id="email" name="email" placeholder="eg. janedoe@hotmail.com" required /><br />
+        <label id="number-label" for="number">
+          Age (optional)
+        </label><br />
+        <input type="number" id="number" name="age" min="13" max="110" placeholder="eg. 23" required /><br />
+        <label for="dropdown">
+          What best describes you?
+        </label><br />
+        <select id="dropdown">
+          <option disabled="" value="">(select one)</option>
+          <option value="1">Student</option>
+          <option value="2">Worker</option>
+          <option value="3">Prefer not to say</option>
+          <option value="4">Other</option>
+        </select>
+        <p>Do you like me?</p>
+        <input type="radio" name="user-like" value="yes" id="yes" checked />
+        <label for="yes">
+           Yes
+        </label>
+          <input type="radio" name="user-like" value="no" id="no" />        
+        <label for="no">
+          No
+        </label><br />
+        <label for="dropdown2">
+          What do you like most about me?
+        </label><br />
+        <select id="dropdown2">
+          <option disabled="" value="">(select one)</option>
+          <option value="1">Hair</option>
+          <option value="2">Eyes</option>
+          <option value="3">Prefer not to say</option>
+          <option value="4">Other</option>
+        </select>
+        <p>What would you like to see improved?</p>
+        <input type="checkbox" name="user-feedback" value="discipline" id="discipline" />
+        <label for="discipline">
+           Discipline
+        </label><br />
+          <input type="checkbox" name="user-feedback" value="kindness" id="kindness" />        
+        <label for="kindness">
+          Kindness
+        </label><br />
+        <label for="comments">
+          Do you have any additional feedback you would like to add?
+        </label><br />
+        <textarea id="comments" name="comment" placeholder="Enter your comment here..."></textarea><br />
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

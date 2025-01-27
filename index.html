@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Drake's Portfolio</title>
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
         <!--BACKGROUND VIDEO-->
@@ -12,14 +12,14 @@
                 <video autoplay muted loop plays-inline id="myVideo">
                     <source src="data/Matrix Raining Green Code Backdrop Video Copyright Free.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>                        -- disabling video as it is somewhat over-the-top
+                </video>                                                        -- disabling video as it is somewhat over-the-top
                 <div class="overlay"></div>
             </div> -->
         <!--END BACKGROUND VIDEO-->
         <!-- START AUDIO SECTION -->
         <!-- <audio id="audioPlayer" controls loop></audio>
         <div class="audio-controls">
-            <button id="playPauseBtn">▶</button>                -- bypassing audio due to cumbersome nature
+            <button id="playPauseBtn">▶</button>                                -- bypassing audio due to cumbersome nature
             <span id="currentTrack" class="selectable"></span>
         </div> -->
         <!-- <div class="audio-controls-secondary" style="display: none;">
@@ -33,15 +33,15 @@
                 <div id="nav-accent">
                     <ul class="nav-list">
                         <li>
-                            <a href="#welcome-section" class="smooth-scroll">About</a>
+                            <a href="/index.html" class="smooth-scroll">Home</a>
                         </li>
                         <div class="vert-line"></div>
                         <li>
-                            <a href="#projects" class="smooth-scroll">Work</a>
+                            <a href="#projects-container" class="smooth-scroll">Work</a>
                         </li>
                         <div class="vert-line"></div>
                         <li>
-                            <a href="#contact" class="smooth-scroll">Contact</a>
+                            <a href="#contact-container" class="smooth-scroll">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -52,118 +52,170 @@
             <section id="welcome-section">
                 <div id="welcome-text">
                     <h1 class="title"><span class="norm-weight title-a"></span> <span id="v3i1ix">Drake Hay</span></h1>
-                    <h3 class="subtitle">Collaborative Innovation Strategist</h3>
+                    <h3 class="subtitle">
+                        <span class="norm-weight subtitle-a">
+                            "With our thoughts, we make the world"
+                            <br>
+                            - Buddha
+                        </span>
+                    </h3>
                 </div>                
             </section>
             <!--END WELCOME SECTION-->
             <!--START PROJECTS SECTION-->
-            <div class="container">
-                <section id="projects">
-                    <h1>Projects</h1>
-                    <div class="heading-hr"></div>
-                    <fieldset id="js">
-                        <legend>
-                            JavaScript Algorithms and Data Structures<br>
-                            <span class="fieldset-subtitle">Developer Certification</span>
-                        </legend>
-                        
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/pokemonSearch.gif" alt="Pokémon Search Project">
-                                <span class="tile-heading">Pokémon Search</span>
-                            </a>
-                        </div>
-
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/cashRegister.gif" alt="Cash Register Project">
-                                <span class="tile-heading">Cash Register</span>
-                            </a>
-                        </div>
-
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/phoneNumberValidation.gif" alt="Phone Number Validator Project">
-                                <span class="tile-heading">US Phone Number Validator</span>
-                            </a>
-                        </div>
-
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/romanNumeralConverter.gif" alt="Roman Numeral Converter Project">
-                                <span class="tile-heading">Roman Numeral Converter</span>
-                            </a>
-                        </div>
-
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/palindromeChecker.gif" alt="Palindrome Checker Project">
-                                <span class="tile-heading">Palindrome Checker</span>
-                            </a>
-                        </div>
-
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/images/beforePalindrome/calorieCounter.png" alt="Calorie Counter Project">
-                                <span class="tile-heading">Calorie Counter</span>
-                            </a>
-                        </div>
-
-                    </fieldset>
-                    <fieldset id="rwd">
-                        <legend>
-                            Responsive Web Design<br>
-                            <span class="fieldset-subtitle">Developer Certification</span>
-                        </legend>
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/surveyForm.gif" alt="Survey Form Project">
-                                <span class="tile-heading">Survey Form</span>
-                            </a>
-                        </div>
-                        <div class="project-tile" id="">
-                            <a>
-                                <img src="./data/tributePage.gif" alt="Tribute Page Project">
-                                <span class="tile-heading">Tribute Page</span>
-                            </a>
-                        </div>
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/techDoc.gif" alt="Technical Documentation Project">
-                                <span class="tile-heading">Technical Documentation Page</span>
-                            </a>
-                        </div>
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/productLandPage.gif" alt="Product Landing Page Project">
-                                <span class="tile-heading">Product Landing Page</span>
-                            </a>
-                        </div>
-                        <div class="project-tile">
-                            <a>
-                                <img src="./data/portfolioPage.gif" alt="Personal Portfolio Project">
-                                <span class="tile-heading">Personal Portfolio</span>
-                            </a>
-                        </div>
-                    </fieldset>
-                </section>
-                <!--END PROJECTS SECTION-->
-                <!--START CONTACT SECTION-->
-                <section id="contact" class="contact-section">
-                    <div class="contact-links">
-                        <a id="profile-link" href="https://github.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </section>
+            <div id="projects-container" class="container-padding">
+                <div class="container">
+                    <section id="projects">
+                        <h1>Projects</h1>
+                        <div class="heading-hr"></div>
+                        <fieldset id="js">
+                            <legend>
+                                JavaScript Algorithms and Data Structures<br>
+                                <span class="fieldset-subtitle">Developer Certification</span>
+                            </legend>
+                            
+                            <div class="project-tile">
+                                <a href="/projects/JavaScript AaDS/pokemon-search/pokemon-search.html">
+                                    <img src="/projects/JavaScript AaDS/pokemon-search/pokemonSearch.gif" alt="Pokémon Search Project">
+                                    <span class="tile-heading">Pokémon Search</span>
+                                </a>
+                            </div>
+    
+                            <div class="project-tile">
+                                <a href="/projects/JavaScript AaDS/cash-register/cash-register.html">
+                                    <img src="/projects/JavaScript AaDS/cash-register/cashRegister.gif" alt="Cash Register Project">
+                                    <span class="tile-heading">Cash Register</span>
+                                </a>
+                            </div>
+    
+                            <div class="project-tile">
+                                <a href="/projects/JavaScript AaDS/us-phone-number-validator/us-phone-number-validator.html">
+                                    <img src="/projects/JavaScript AaDS/us-phone-number-validator/phoneNumberValidation.gif" alt="Phone Number Validator Project">
+                                    <span class="tile-heading">US Phone Number Validator</span>
+                                </a>
+                            </div>
+    
+                            <div class="project-tile">
+                                <a href="/projects/JavaScript AaDS/roman-numeral-converter/roman-numeral-converter.html">
+                                    <img src="/projects/JavaScript AaDS/roman-numeral-converter/romanNumeralConverter.gif" alt="Roman Numeral Converter Project">
+                                    <span class="tile-heading">Roman Numeral Converter</span>
+                                </a>
+                            </div>
+    
+                            <div class="project-tile">
+                                <a href="/projects/JavaScript AaDS/palindrome-checker/palindrome-checker.html">
+                                    <img src="/projects/JavaScript AaDS/palindrome-checker/palindromeChecker.gif" alt="Palindrome Checker Project">
+                                    <span class="tile-heading">Palindrome Checker</span>
+                                </a>
+                            </div>
+    
+                            <div class="project-tile">
+                                <a href="/projects/JavaScript AaDS/calorie-counter/calorie-counter.html">
+                                    <img src="./data/images/beforePalindrome/calorieCounter.png" alt="Calorie Counter Project">
+                                    <span class="tile-heading">Calorie Counter</span>
+                                </a>
+                            </div>
+    
+                        </fieldset>
+                        <fieldset id="rwd">
+                            <legend>
+                                Responsive Web Design<br>
+                                <span class="fieldset-subtitle">Developer Certification</span>
+                            </legend>
+                            <div class="project-tile">
+                                <a href="/projects/RWD/personal-portfolio/personal-portfolio.html">
+                                    <img src="/projects/RWD/personal-portfolio/portfolioPage.gif" alt="Personal Portfolio Project">
+                                    <span class="tile-heading">Personal Portfolio</span>
+                                </a>
+                            </div>
+                            <div class="project-tile">
+                                <a href="/projects/RWD/product-landing-page/product-landing-page.html">
+                                    <img src="/projects/RWD/product-landing-page/productLandPage.gif" alt="Product Landing Page Project">
+                                    <span class="tile-heading">Product Landing Page</span>
+                                </a>
+                            </div>
+                            <div class="project-tile">
+                                <a href="/projects/RWD/technical-documentation-page/technical-documentation-page.html">
+                                    <img src="/projects/RWD/technical-documentation-page/techDoc.gif" alt="Technical Documentation Project">
+                                    <span class="tile-heading">Technical Documentation Page</span>
+                                </a>
+                            </div>
+                            <div class="project-tile">
+                                <a href="/projects/RWD/tribute-page/tribute-page.html">
+                                    <img src="/projects/RWD/tribute-page/tributePage.gif" alt="Tribute Page Project">
+                                    <span class="tile-heading">Tribute Page</span>
+                                </a>
+                            </div>
+                            <div class="project-tile">
+                                <a href="/projects/RWD/survey-form/survey-form.html">
+                                    <img src="/projects/RWD/survey-form/surveyForm.gif" alt="Survey Form Project">
+                                    <span class="tile-heading">Survey Form</span>
+                                </a>
+                            </div>
+                        </fieldset>
+                    </section>
+                    <!--END PROJECTS SECTION-->
+                    
+                </div>
             </div>
-            <!--END CONTACT SECTION-->
-            
+            <!-- START CONTACT SECTION -->
+            <div id="contact-container" class="container-padding">
+                <div class="container">
+                    <section id="contact">
+                        <h1>Contact</h1>
+                        <div class="heading-hr"></div>
+                        <div id="contact-div">
+                            <fieldset class="contact-fieldset">
+                                <legend>Direct</legend>
+                                <form id="contact-form" action="https://formsubmit.co/v3i1ix@proton.me" method="POST">
+                                    <div class="form-element">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" required></textarea>
+                                    </div>
+                                    <button type="submit" id="contact-send">Send</button>
+                                </form>
+                            </fieldset>
+                            <fieldset class="contact-fieldset">
+                                <legend>Indirect</legend>
+                                <div id="profile-links">
+                                    <a class="profile-link" href="https://www.linkedin.com/in/drakehay" target="_blank">
+                                        <img src="/data/images/logos/LI-Logo_v2.png" width="100rem" alt="LinkedIn Profile">
+                                    </a>
+                                    <a href="https://github.com/disbelief2389" class="profile-link" target="_blank">
+                                        <img src="/data/images/logos/GitHub_Logo_v2.png" width="85rem" alt="GitHub Profile">
+                                    </a>
+                                </div>
+                                <div id="custom-hr-2"></div>
+                                <div id="contact-info">
+                                    <p>Phone: <span class="contact-detail selectable">+61 435 263 600</span></p>
+                                    <p>Email: <span class="contact-detail selectable">v3i1ix@proton.me</span></p>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <!-- <section id="contact" class="contact-section">
+                            <div class="contact-links">
+                                <a id="profile-link" href="https://github.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </section> -->
+                    </section>
+                </div>
+            </div>
+            <!-- END CONTACT SECTION -->
             <!--START FOOTER SECTION-->
             <footer>
                 
             </footer>
             <!--END FOOTER SECTION-->
         </main>
-        
+        <div id="copy-feedback" aria-live="polite"></div>
         <script src="./data.js"></script>
         <script src="./script.js"></script>
     </body>

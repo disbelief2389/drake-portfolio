@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/project-page.css">
+    <title>Personal Portfolio Project</title>
+</head>
+<body>
+    <!--START NAV-->
+    <nav id="navbar" class="nav">
+        <div id="nav-accent">
+            <ul class="nav-list">
+                <li>
+                    <a href="/index.html" class="smooth-scroll">Home</a>
+                </li>
+                <div class="vert-line"></div>
+                <li>
+                    <a href="/#projects-container" class="smooth-scroll">Work</a>
+                </li>
+                <div class="vert-line"></div>
+                <li>
+                    <a href="/#contact-container" class="smooth-scroll">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div id="flair"></div>
+    </nav>
+    <!--END NAV-->
+    <div class="container-padding">
+        <div class="container">
+            <h1>Personal Portfolio Project</h1>
+            <div class="heading-hr"></div>
+            <div class="project-intro">
+                <p>
+                    This project is a personal portfolio. It showcases my work and provides a way to contact me. In fact, you're looking at it right now!
+                    <br><br>
+                    I built this project from scratch using HTML, CSS, and JavaScript. I'll be honest, at first, I didn't make it look pretty. I'll show you the before here, but since this entire website is the after, you have a pretty good idea of what it looks like now.
+                    <br><br>
+                    It's a lot more polished now. I've spent a lot of time implementing what I've learned having since completed the JavaScript Algorithms and Data Structures certification as well. I've learned a lot about responsive web design, and I've been able to apply that knowledge to this project.
+                    <br><br>
+                    At first all I aimed to achieve was to pass the tests. I'm not particularly proud of the initial version of the project, it was probably the least polished project I've 'finished', and was really only aimed at passing the programming tests instead of being a usable portfolio, which is kind of ironic now, because it is now probably the most polished project I have, at least as far as a fundamentally responsive design goes.
+                    <br><br>
+                    It is now a tremendous asset of mine, to finally have a platform to showcase my work, and to have a place to direct potential employers to. Anyway, enough stalling from me--brace yourself, here comes the before!
+                </p>
+            </div>
+            <div class="project-frame">
+                <figure class="iframe-container">
+                    <iframe src="/projects/RWD/personal-portfolio/source/index.html" frameborder="0" id="project-frame"></iframe>
+                    <figcaption>
+                        Yep, that's it.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="project-outro">
+                <p>
+                    So, there you have it. The before. As you can see, I've come a long way. It's still a work in progress, but I've learned a lot about web design and development, and I've been able to apply that knowledge to this project. I'm proud of what I've accomplished, and I'm excited to see where this journey takes me.
+                    <br><br>
+                    It's a beautiful thing to now be able to tell you that if you have any questions, or if you'd like to work with me, you can contact me via the contact button in the navigation bar. I'm looking forward to hearing from you!
+                    <br><br>
+                </p>
+                <div class="heading-hr"></div>
+                <p>
+                    Now, I'll get into the reeds of the project. I'll show you the code, explain how it works, and tell you what I changed to make it look the way it does now.
+                    <br><br>
+                    So, you've probably noticed by now the green on black aesthetic. I'm very inspired by the Matrix, and particularly interested and affectionate towards the color green. Having heard in the past the sub-conscious effects of the color green on the human psyche, paired with the logic that green is our home. The forest & the jungle. It makes sense to me that green is a color that is calming and grounding.
+                    <br><br>
+                    In practical use, I find that the green on black aesthetic is very easy on the eyes, and I find it very easy to read, and easy to get lost in focus. So, I decided to go with that aesthetic for this project.
+                    <br><br>
+                    I started out going pretty crazy with CSS, I had a video background of a super trippy and psychedelic digital art piece. It was cool, but it was a bit much. I've since toned it down, and I've gone with a simple black background with green on top. That alone conveys the aesthetic I'm going for, and it's a lot easier on the eyes than it was before.
+                    <br><br>
+                    Credit goes to my job coach Jazz for the reminder to keep it simple. It can be easy to get carried away with trying to dazzle people with your skills, but sometimes less is more. I'm not sure this is a lesson that can ever be fully learned, I think it is more like a friend that is always there, always dependable, always someone that you can turn to as a way forward.
+                    <br><br>
+                    Anyway, so I got rid of the video. I also had audio, but I got rid of that too. I focused more on functionality, making sure that links had pages to go to. I made the contact form, which was prevously just a GitHub link.
+                    <br><br>
+                    I've stuck with the original theme that I went for though, which at it's core is just a sort of Sci-Fi, Matrix, Cyberpunk, Digital Art, Green on Black aesthetic. It's cool and it's me, and I'm happy with it.
+                    <br><br>
+                    Let's get into the code. I'll show you the HTML, CSS, and JavaScript, and I'll explain how it works.
+                    <br><br>
+                </p>
+                <div class="heading-hr"></div>
+                <figure>
+                    <fieldset id="html-code" class="code-fieldset selectable">
+                        <legend>HTML</legend>
+                        <pre>
+                            <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot; /&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+            &lt;title&gt;Drake&#39;s Portfolio&lt;/title&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/styles.css&quot; /&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;!--BACKGROUND VIDEO--&gt;
+                &lt;!-- &lt;div class=&quot;video-background&quot;&gt;
+                    &lt;video autoplay muted loop plays-inline id=&quot;myVideo&quot;&gt;
+                        &lt;source src=&quot;data/Matrix Raining Green Code Backdrop Video Copyright Free.mp4&quot; type=&quot;video/mp4&quot;&gt;
+                        Your browser does not support the video tag.
+                    &lt;/video&gt;                                                        -- disabling video as it is somewhat over-the-top
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; --&gt;
+            &lt;!--END BACKGROUND VIDEO--&gt;
+            &lt;!-- START AUDIO SECTION --&gt;
+            &lt;!-- &lt;audio id=&quot;audioPlayer&quot; controls loop&gt;&lt;/audio&gt;
+            &lt;div class=&quot;audio-controls&quot;&gt;
+                &lt;button id=&quot;playPauseBtn&quot;&gt;▶&lt;/button&gt;                                -- bypassing audio due to cumbersome nature
+                &lt;span id=&quot;currentTrack&quot; class=&quot;selectable&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt; --&gt;
+            &lt;!-- &lt;div class=&quot;audio-controls-secondary&quot; style=&quot;display: none;&quot;&gt;
+                &lt;button id=&quot;playPauseBtnSecondary&quot;&gt;▶&lt;/button&gt;
+                &lt;span id=&quot;currentTrackSecondary&quot; class=&quot;selectable&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt; --&gt;
+            &lt;!-- END AUDIO SECTION --&gt;
+            &lt;main id=&quot;main-doc&quot;&gt;
+                &lt;!--START NAV--&gt;
+                &lt;nav id=&quot;navbar&quot; class=&quot;nav&quot;&gt;
+                    &lt;div id=&quot;nav-accent&quot;&gt;
+                        &lt;ul class=&quot;nav-list&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;/index.html&quot; class=&quot;smooth-scroll&quot;&gt;Home&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;div class=&quot;vert-line&quot;&gt;&lt;/div&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#projects-container&quot; class=&quot;smooth-scroll&quot;&gt;Work&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;div class=&quot;vert-line&quot;&gt;&lt;/div&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#contact-container&quot; class=&quot;smooth-scroll&quot;&gt;Contact&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div id=&quot;flair&quot;&gt;&lt;/div&gt;
+                &lt;/nav&gt;
+                &lt;!--END NAV--&gt;
+                &lt;!--START WELCOME SECTION--&gt;
+                &lt;section id=&quot;welcome-section&quot;&gt;
+                    &lt;div id=&quot;welcome-text&quot;&gt;
+                        &lt;h1 class=&quot;title&quot;&gt;&lt;span class=&quot;norm-weight title-a&quot;&gt;&lt;/span&gt; &lt;span id=&quot;v3i1ix&quot;&gt;Drake Hay&lt;/span&gt;&lt;/h1&gt;
+                        &lt;h3 class=&quot;subtitle&quot;&gt;
+                            &lt;span class=&quot;norm-weight subtitle-a&quot;&gt;
+                                &quot;With our thoughts, we make the world&quot;
+                                &lt;br&gt;
+                                - Buddha
+                            &lt;/span&gt;
+                        &lt;/h3&gt;
+                    &lt;/div&gt;                
+                &lt;/section&gt;
+                &lt;!--END WELCOME SECTION--&gt;
+                &lt;!--START PROJECTS SECTION--&gt;
+                &lt;div id=&quot;projects-container&quot; class=&quot;container-padding&quot;&gt;
+                    &lt;div class=&quot;container&quot;&gt;
+                        &lt;section id=&quot;projects&quot;&gt;
+                            &lt;h1&gt;Projects&lt;/h1&gt;
+                            &lt;div class=&quot;heading-hr&quot;&gt;&lt;/div&gt;
+                            &lt;fieldset id=&quot;js&quot;&gt;
+                                &lt;legend&gt;
+                                    JavaScript Algorithms and Data Structures&lt;br&gt;
+                                    &lt;span class=&quot;fieldset-subtitle&quot;&gt;Developer Certification&lt;/span&gt;
+                                &lt;/legend&gt;
+                                
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a href=&quot;/projects/JavaScript AaDS/pokemon-search/pokemon-search.html&quot;&gt;
+                                        &lt;img src=&quot;/projects/JavaScript AaDS/pokemon-search/pokemonSearch.gif&quot; alt=&quot;Pokémon Search Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Pokémon Search&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+        
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a href=&quot;/projects/JavaScript AaDS/cash-register/cash-register.html&quot;&gt;
+                                        &lt;img src=&quot;/projects/JavaScript AaDS/cash-register/cashRegister.gif&quot; alt=&quot;Cash Register Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Cash Register&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+        
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a href=&quot;/projects/JavaScript AaDS/us-phone-number-validator/us-phone-number-validator.html&quot;&gt;
+                                        &lt;img src=&quot;/projects/JavaScript AaDS/us-phone-number-validator/phoneNumberValidation.gif&quot; alt=&quot;Phone Number Validator Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;US Phone Number Validator&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+        
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a href=&quot;/projects/JavaScript AaDS/roman-numeral-converter/roman-numeral-converter.html&quot;&gt;
+                                        &lt;img src=&quot;./data/romanNumeralConverter.gif&quot; alt=&quot;Roman Numeral Converter Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Roman Numeral Converter&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+        
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a href=&quot;/projects/JavaScript AaDS/palindrome-checker/palindrome-checker.html&quot;&gt;
+                                        &lt;img src=&quot;/projects/JavaScript AaDS/palindrome-checker/palindromeChecker.gif&quot; alt=&quot;Palindrome Checker Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Palindrome Checker&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+        
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a&gt;
+                                        &lt;img src=&quot;./data/images/beforePalindrome/calorieCounter.png&quot; alt=&quot;Calorie Counter Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Calorie Counter&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+        
+                            &lt;/fieldset&gt;
+                            &lt;fieldset id=&quot;rwd&quot;&gt;
+                                &lt;legend&gt;
+                                    Responsive Web Design&lt;br&gt;
+                                    &lt;span class=&quot;fieldset-subtitle&quot;&gt;Developer Certification&lt;/span&gt;
+                                &lt;/legend&gt;
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a href=&quot;/projects/RWD/personal-portfolio/personal-portfolio.html&quot;&gt;
+                                        &lt;img src=&quot;/projects/RWD/personal-portfolio/portfolioPage.gif&quot; alt=&quot;Personal Portfolio Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Personal Portfolio&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a&gt;
+                                        &lt;img src=&quot;./data/productLandPage.gif&quot; alt=&quot;Product Landing Page Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Product Landing Page&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a&gt;
+                                        &lt;img src=&quot;./data/techDoc.gif&quot; alt=&quot;Technical Documentation Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Technical Documentation Page&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;project-tile&quot; id=&quot;&quot;&gt;
+                                    &lt;a&gt;
+                                        &lt;img src=&quot;./data/tributePage.gif&quot; alt=&quot;Tribute Page Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Tribute Page&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;project-tile&quot;&gt;
+                                    &lt;a&gt;
+                                        &lt;img src=&quot;./data/surveyForm.gif&quot; alt=&quot;Survey Form Project&quot;&gt;
+                                        &lt;span class=&quot;tile-heading&quot;&gt;Survey Form&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/fieldset&gt;
+                        &lt;/section&gt;
+                        &lt;!--END PROJECTS SECTION--&gt;
+                        
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- START CONTACT SECTION --&gt;
+                &lt;div id=&quot;contact-container&quot; class=&quot;container-padding&quot;&gt;
+                    &lt;div class=&quot;container&quot;&gt;
+                        &lt;section id=&quot;contact&quot;&gt;
+                            &lt;h1&gt;Contact&lt;/h1&gt;
+                            &lt;div class=&quot;heading-hr&quot;&gt;&lt;/div&gt;
+                            &lt;div id=&quot;contact-div&quot;&gt;
+                                &lt;fieldset class=&quot;contact-fieldset&quot;&gt;
+                                    &lt;legend&gt;Direct&lt;/legend&gt;
+                                    &lt;form id=&quot;contact-form&quot; action=&quot;https://formsubmit.co/v3i1ix@proton.me&quot; method=&quot;POST&quot;&gt;
+                                        &lt;div class=&quot;form-element&quot;&gt;
+                                            &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+                                            &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;form-element&quot;&gt;
+                                            &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+                                            &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;form-element&quot;&gt;
+                                            &lt;label for=&quot;message&quot;&gt;Message&lt;/label&gt;
+                                            &lt;textarea id=&quot;message&quot; name=&quot;message&quot; required&gt;&lt;/textarea&gt;
+                                        &lt;/div&gt;
+                                        &lt;button type=&quot;submit&quot; id=&quot;contact-send&quot;&gt;Send&lt;/button&gt;
+                                    &lt;/form&gt;
+                                &lt;/fieldset&gt;
+                                &lt;fieldset class=&quot;contact-fieldset&quot;&gt;
+                                    &lt;legend&gt;Indirect&lt;/legend&gt;
+                                    &lt;div id=&quot;profile-links&quot;&gt;
+                                        &lt;a class=&quot;profile-link&quot; href=&quot;https://www.linkedin.com/in/drakehay&quot; target=&quot;_blank&quot;&gt;
+                                            &lt;img src=&quot;/data/images/logos/LI-Logo_v2.png&quot; width=&quot;100rem&quot; alt=&quot;LinkedIn Profile&quot;&gt;
+                                        &lt;/a&gt;
+                                        &lt;a href=&quot;https://github.com/disbelief2389&quot; class=&quot;profile-link&quot; target=&quot;_blank&quot;&gt;
+                                            &lt;img src=&quot;/data/images/logos/GitHub_Logo_v2.png&quot; width=&quot;85rem&quot; alt=&quot;GitHub Profile&quot;&gt;
+                                        &lt;/a&gt;
+                                    &lt;/div&gt;
+                                    &lt;div id=&quot;custom-hr-2&quot;&gt;&lt;/div&gt;
+                                    &lt;div id=&quot;contact-info&quot;&gt;
+                                        &lt;p&gt;Phone: &lt;span class=&quot;contact-detail selectable&quot;&gt;+61 435 263 600&lt;/span&gt;&lt;/p&gt;
+                                        &lt;p&gt;Email: &lt;span class=&quot;contact-detail selectable&quot;&gt;v3i1ix@proton.me&lt;/span&gt;&lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                            &lt;/div&gt;
+                            &lt;!-- &lt;section id=&quot;contact&quot; class=&quot;contact-section&quot;&gt;
+                                &lt;div class=&quot;contact-links&quot;&gt;
+                                    &lt;a id=&quot;profile-link&quot; href=&quot;https://github.com/freecodecamp&quot; target=&quot;_blank&quot; class=&quot;btn contact-details&quot;&gt;&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt; GitHub&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt; --&gt;
+                        &lt;/section&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- END CONTACT SECTION --&gt;
+                &lt;!--START FOOTER SECTION--&gt;
+                &lt;footer&gt;
+                    
+                &lt;/footer&gt;
+                &lt;!--END FOOTER SECTION--&gt;
+            &lt;/main&gt;
+            &lt;div id=&quot;copy-feedback&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+            &lt;script src=&quot;./data.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;./script.js&quot;&gt;&lt;/script&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    
+                            </code>
+                        </pre>
+                    </fieldset>
+                    <figcaption>
+                        Notice the "project-tile" class. This projectile class has been the source of a lot of my private humour during development. I've been calling them "projectiles" in my head. I think it's funny. I hope you do too.
+                    </figcaption>
+                </figure>
+                <fieldset id="css-code" class="code-fieldset selectable">
+                    <legend>CSS</legend>
+                    <pre>
+                        <code>
+:root {
+    --main-white: #ffffff;
+    --main-green: rgb(0, 255, 0);
+    --second-green: green;
+    --main-gray: #020302;
+    background-color: var(--main-gray);
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    /*z-index: 1;*/
+    scrollbar-color: #004000 #001100;
+    scrollbar-width: thin;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    color: #00ff00;
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+    * default document font size = 16px, 1rem = 16px, 100% = 16px
+    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 100%;
+    font-family: monospace;
+    scroll-behavior: smooth;
+    
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+
+    .container {
+        max-width: 65em;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+
+    .container {
+        max-width: 53em;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the video behind other content */
+    overflow: hidden;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    filter: blur(0px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.473); /* Black with 50% opacity */
+    z-index: 1;
+}
+
+.selectable {
+    user-select: text; /* Standard syntax */
+    -webkit-user-select: text; /* Safari and older versions of Chrome */
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* Internet Explorer/Edge */
+}
+
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    min-height: 100vh;
+    background: linear-gradient(
+    160deg,
+    rgb(6, 6, 6),
+    rgb(0, 0, 0)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*body,
+html {
+    overflow: hidden;
+}*/
+
+/* Container class for layout */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 20px;
+    padding-top: 50px;
+    border: 2px solid #ffffff00;
+    border-radius: 25px;
+    transition: border-color 1.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.452);
+    overflow: visible !important; /* Override any hidden overflow */
+}
+
+.container-padding {
+    padding: 150px 0px;
+    max-width: 100%;
+}
+
+.container:hover {
+    border-color: #00ff001c;
+}
+
+/* Basic styling for headers */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#welcome-section {
+    height: 70vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 15rem;
+    transform: translateY(-50px);
+}
+
+.norm-weight {
+    font-weight: normal;
+}
+
+/*.title {
+    
+}*/
+
+body {
+    padding-top: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Dark background */
+    padding: 10px 20px; /* Add some padding */
+     /* Add a shadow for depth */
+    z-index: 1100; /* Ensure it's above other content */
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 50%;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.vert-line {
+    width: 20px;
+    height: 100px;
+    border: 1px solid transparent;
+    background: linear-gradient(
+        to top,
+        transparent,
+        transparent,
+        #00ff000e,
+        transparent,
+        transparent
+    );;
+    overflow: hidden;
+}
+
+#flair {
+    position: fixed;
+    z-index: -1;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 5%,
+        green,
+        transparent 95%
+    );
+}
+
+#nav-accent {
+    position: fixed;
+    min-width: 50%;
+    height: 80px;
+    border: 1px solid rgba(0, 255, 0, 0.068);
+    border-bottom: 2px solid transparent;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 0 0 20% 20%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.329),
+        rgba(0, 0, 0, 0.815) 5%,
+        var(--main-gray) 33%,
+        var(--main-gray) 66%,
+        rgba(0, 0, 0, 0.808) 95%,
+        rgba(0, 0, 0, 0.322)
+    );
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.5s ease;
+}
+
+#nav-accent:hover {
+    border-bottom: 2px solid rgba(0, 255, 0, 0.192);
+}
+
+nav ul {
+    list-style: none;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    position: relative; /* Ensure the ul is positioned correctly */
+    z-index: 1101; /* Ensure the nav links are above the navbar */
+    vertical-align: middle;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul li a {
+    color: rgba(0, 128, 0, 0.733);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    letter-spacing: 0.7rem;
+    border: solid 1px transparent;
+    /*ADD PADDING + MARGIN TO CUSTOMISE HOVER HIGHLIGHT SIZE*/
+    transition: border-color 0.1s ease; /* Smooth transition for hover effect */
+    position: relative; /* Ensure the links are positioned correctly */
+    z-index: 1002; /* Ensure the links are above the nav ul */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    border-color: #00ff002c; /* Slightly lighter background on hover */
+    color: rgba(0, 255, 0, 0.582);
+}
+
+#audioPlayer {
+    display: none;
+}
+
+.audio-controls {
+    max-width: 200px;
+    min-width: 199px;
+    min-height: 150px;
+    position: fixed;
+    top: 38%;
+    left: 85%;
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.167);
+    border: 1px inset transparent;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    /* bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.audio-controls:hover {
+    background-color: rgba(0, 0, 0, 0.736);
+    border-color: green;
+    color: green;
+    /* transform: translateY(30px); */
+}
+
+#playPauseBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #00ff0018;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color .2s ease-in-out;
+  }
+  
+#playPauseBtn:hover {
+    color: #00ff00a7;
+}
+
+#currentTrack {
+    color: #00ff001b;
+    font-size: 14px;
+    margin: 10px;
+    transition: color .2s ease-in-out; 
+}
+
+#currentTrack:hover {
+    color: #00ff008f;
+}
+
+#volumeText {
+    font-size: 11px;
+    margin: 10px;
+    color: #00ff0029;
+}
+
+.subtitle {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-top: -3rem;
+    scale: .8;
+    /* background: linear-gradient(
+        to right,
+        #0083003b,
+        green 20%,
+        rgba(0, 255, 0, 0.568) 80%,
+        #0088001f
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+}
+
+#welcome-text {
+    margin-top: 10rem;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: blur(0px);
+    transition: filter .3s ease-in-out, opacity 0.3s ease;
+}
+
+#welcome-text .title {
+    height: 10%;
+    width: 50%;
+    margin: 2%;
+    margin-bottom: 6rem;
+    padding: auto;
+    font-size: 5rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.14);
+    
+}
+
+.title-a {
+    background: linear-gradient(
+        to right,
+        rgba(0, 255, 0, 0.363),
+        rgb(0, 255, 0)
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 0.8; /* Adjust line height to prevent cutting off */
+    padding-bottom: 100px; /* Add padding if needed */
+}
+
+fieldset {
+    min-width: 0;
+    max-width: inherit;
+    position: relative;
+    color: green;
+    border-radius: 15px;
+    border-color: #00ff000d;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem; /* Adds space between cards */
+    margin: 6rem;
+    transition: border-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+fieldset:hover {
+    border-color: #00ff0034;
+    color: #00ff00;
+}
+
+legend {
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 1rem;
+}
+
+.fieldset-subtitle {
+    font-size: 70%;
+    font-weight: normal;
+    font-style: italic;
+    vertical-align: top;
+    color: green;
+}
+
+section {
+    margin: 3rem auto;
+    z-index: 999;
+    color: green;
+    transition: color .5s ease-in-out;
+}
+
+section:hover {
+    color: #00ff00;
+}
+
+.heading-hr {
+    max-width: 40%;
+    margin: 0 auto;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00ff001c,
+        transparent
+    );
+}
+
+.project-tile {
+    border: 1px solid rgba(0, 128, 0, 0.155);
+    border-radius: 10px;
+    transition: all .1s ease-in-out;
+    margin: .8rem;
+    display: grid;
+    grid-template-rows: 90% 10%; /* Image takes 70%, title takes 30% */
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.project-tile a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: green;
+    transition: color .1s ease;
+}
+
+.project-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.project-tile:hover {
+    cursor: pointer;
+    border-color: rgba(0, 255, 0, 0.452);
+    transform: translateY(-2px);
+}
+
+.project-tile:active {
+    background-color: #00ff00;
+}
+
+.project-tile a:hover {
+    color: #00ff00;
+}
+
+.project-tile a:active {
+    color: black;
+}
+
+a {
+    color: rgb(0, 255, 0);
+}
+
+.tile-heading {
+    height: 30%;
+    font-weight: bold;
+    font-size: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -15px;
+    padding: 1rem;
+}
+
+#v3i1ix {
+    -webkit-text-stroke: 1px transparent;
+    color: var(--main-green);
+    /* Specify the properties to transition */
+    transition: color 175ms ease-in-out, -webkit-text-stroke-color 175ms ease-in-out;
+}
+
+#v3i1ix:hover {
+    color: transparent;
+    -webkit-text-stroke-color: #00ff00;
+}
+
+.contact-fieldset {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 3rem auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    /* border: 1px solid rgba(0, 255, 0, 0.452);
+    border-radius: 10px; */
+    transition: border-color .5s ease-in-out;
+    font-size: 1.25em;
+}
+
+#contact-send {
+    margin: 0 auto;
+}
+
+textarea {
+    min-width: 250px;
+    min-height: 100px;
+}
+
+#email {
+    min-width: 250px;
+}
+
+input, textarea {
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.127);
+    border: 1px solid rgba(0, 255, 0, 0.132);
+    color: green;
+    padding: 5px;
+    transition: border-color .5s ease-in-out;
+}
+
+input,
+textarea {
+    border-radius: 10px;
+}
+
+input:hover,
+textarea:hover {
+    border-color: #008000;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.452);
+    border: 1px solid rgba(0, 255, 0, 0.452);
+    border-radius: 12px;
+    color: green;
+    padding: .5rem 1rem;
+    transition: border-color .2s ease-in-out, color .5s ease-in-out, background-color .2s ease-in-out;
+    cursor: pointer;
+    scale: 1.15;
+}
+
+button:hover {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+button:active {
+    background-color: #00ff00;
+    color: black;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+  box-shadow: none;
+  outline: .2px solid #00FF00; /* Example custom outline */
+  outline-offset: 2px; /* Optional spacing */
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: .5rem;
+}
+
+#profile-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+#profile-links::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.profile-link {
+    height: 50px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 80px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: border-color .2s ease-in-out;
+}
+
+.profile-link:hover {
+    border-color: #008000;
+}
+
+.profile-link:active {
+    border-color: #00ff00;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+}
+
+#custom-hr-2 {
+    max-width: 40%;
+    min-width: 340px;
+    margin: 0 auto;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00ff0024,
+        transparent
+    );
+}
+
+.contact-detail {
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: .2rem .6rem;
+    border-radius: 4px;
+}
+  
+.contact-detail:hover {
+    background-color: rgba(0, 255, 0, 0.1); /* Subtle hover effect */
+}
+
+.contact-detail:active {
+    background-color: rgba(0, 255, 0, 0.2); /* Slightly darker on click */
+}
+
+#copy-feedback {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+#copy-feedback.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* For all code blocks site-wide */
+pre {
+    overflow-x: auto; /* Horizontal scroll when needed */
+    white-space: pre; /* Preserve formatting */
+    word-wrap: normal; /* Don't break words */
+    max-width: 100%; /* Respect container's max-width */
+    max-height: 400px;
+    padding: 1rem;
+    margin: 1rem 0;
+    
+    /* background: #0a0a0a; */
+  }
+
+  
+  /* Optional: Style code elements inside paragraphs */
+  code:not(pre code) {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    padding: 0.2em 0.4em;
+    background: #0a0a0a;
+    border-radius: 3px;
+  }
+                        </code>
+                    </pre>
+                </fieldset>
+                <fieldset id="js-code" class="code-fieldset selectable">
+                    <legend>JavaScript</legend>
+                    <pre>
+                        <code>
+// // Constants
+// const background = document.getElementById('myVideo');
+// const headingSection = document.getElementById("welcome-text");
+// const maxBlur = 50; // Maximum blur value
+// const blurFactorA = 20; // Divisor for scrollY to control blur speed
+// const blurFactorB = 40;
+// const transpFactorA = 20;
+// const opacityThreshold = 10;
+// const opacityEnd = 300;
+// const audio = document.getElementById("audioPlayer");
+// const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+// const gainNode = audioContext.createGain();
+// const audioSource = audioContext.createMediaElementSource(audio);
+// const volumeSlider = document.getElementById('volumeSlider');
+// const playPauseBtn = document.getElementById('playPauseBtn');
+// const playlist = [
+//   { src: './data/audio/deadmau5 - Everything Before.mp3', start: 135, }
+// ];
+// let currentTrackIndex = 0;
+
+// // Blur and opacity by scroll
+// document.addEventListener('scroll', function () {
+  
+//   const scrollY = window.scrollY;
+//   const blurValueA = Math.min(scrollY / blurFactorA, maxBlur); // Calculate blur based on scroll
+//   const blurValueB = Math.min(scrollY / blurFactorB, maxBlur);
+
+//   if (background) {
+//     background.style.filter = `blur(${blurValueA}px)`;
+//   }
+//   if (headingSection) {
+//     headingSection.style.filter = `blur(${blurValueB}px)`;
+//   }
+
+//   // Calculate opacity
+//   let opacity = 1;
+//   if (scrollY >= opacityThreshold && scrollY < opacityEnd) {
+//     opacity = 1 - ((scrollY - opacityThreshold) / (opacityEnd - opacityThreshold));
+//   } else if (scrollY >= opacityEnd) {
+//     opacity = 0;
+//   }
+
+//   if (headingSection) {
+//     headingSection.style.opacity = opacity;
+//   }
+// });
+
+// audioSource.connect(gainNode);
+// gainNode.connect(audioContext.destination);
+
+// function fadeIn() {
+//   const currentTime = audioContext.currentTime;
+//   gainNode.gain.setValueAtTime(0, currentTime);
+//   gainNode.gain.linearRampToValueAtTime(1, currentTime + 0.3);
+// }
+
+// function fadeOut() {
+//   const currentTime = audioContext.currentTime;
+//   gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime);
+//   gainNode.gain.linearRampToValueAtTime(0, currentTime + 0.3);
+// }
+
+// function playTrack(index) {
+//   const track = playlist[index];
+//   audio.src = track.src;
+//   audio.currentTime = track.start;
+//   const trackTitle = track.src.split('/').pop().split('.')[0];
+//   document.getElementById('currentTrack').innerText = trackTitle;
+// }
+
+// playPauseBtn.addEventListener('click', function() {
+//   if (audio.paused) {
+//     playTrack(currentTrackIndex);
+//     audio.play();
+//     fadeIn();
+//     playPauseBtn.textContent = '◼';
+//   } else {
+//     fadeOut();
+//     setTimeout(() => {
+//       audio.pause();
+//       playPauseBtn.textContent = '▶';
+//     }, 300); // Wait for fade-out to complete (0.3 seconds)
+//   }
+// });
+
+// audio.addEventListener('ended', function() {
+//   currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+//   playTrack(currentTrackIndex);
+//   audio.play();
+//   fadeIn();
+// });
+
+// volumeSlider.addEventListener('input', function() {
+//   gainNode.gain.value = volumeSlider.value / 100;
+// });
+
+// gainNode.gain.value = volumeSlider.value / 100;
+// playTrack(currentTrackIndex);
+
+// /*
+// next:
+// - fix audio player on scroll
+// - optimise audio player for mobile
+// - add back to top button on scroll
+// - see if we can get some transparency animations through the text
+// - find an easier way to change variable names all at once
+// */
+
+// commented out above as it is currently not in use
+
+document.querySelectorAll('.contact-detail').forEach(element => {
+  element.addEventListener('click', async () => {
+    const text = element.textContent.trim(); // Get text (email/phone)
+    
+    try {
+      await navigator.clipboard.writeText(text);
+      showFeedback('Copied to clipboard!', element); // Show success feedback
+    } catch (err) {
+      showFeedback('Failed to copy', element); // Error handling
+    }
+  });
+});
+
+function showFeedback(message, parentElement) {
+  const feedback = document.getElementById('copy-feedback');
+  feedback.textContent = message;
+  feedback.classList.add('show');
+
+  // Hide after 1.5 seconds
+  setTimeout(() => {
+    feedback.classList.remove('show');
+  }, 1500);
+}
+                        </code>
+                    </pre>
+                </fieldset>
+                <div class="heading-hr"></div>
+                <p>
+                    So, as you can see, the CSS is quite extensive and the JavaScript is quite simple. The JavaScript is used to copy the email and phone number to the clipboard when clicked. The CSS is used to style the page and create the animations and transitions. The HTML is used to create the structure of the page and the content.
+                    <br><br>
+                    A lot of the CSS is used to fine tune little details about the appearance. For example whenever I insert the code <code>&lt;div class=&quot;heading-hr&quot;&gt;&lt;/div&gt;</code>, a custom design of a horizontal rule is created. This is done by using a gradient background and a height of 2px. The CSS is used to style the gradient and the height of the element.
+                    <br><br>
+                    Normally, this would be achieved by using the <code>&lt;hr&gt;</code> tag, but I wanted to create a custom design for the horizontal rule. This is just one example of how the CSS is used to style the page.
+                    <br><br>
+                    There's also just a lot of unnecessary code in there that I haven't removed yet. I'm planning on cleaning it up in the future, but for now it's just there because I'm lazy.
+                </p>
+                <div class="heading-hr"></div>
+                <p>
+                    Anyway, so that's all for the code (not really, but for now I don't see much need to go into more depth). If you have any questions about the code or anything else, feel free to ask. I'm always happy to help out.
+                    <br><br>
+                    I hope you enjoyed reading this and I hope you have a great day!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

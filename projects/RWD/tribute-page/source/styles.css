@@ -1,0 +1,40 @@
+:root {
+    background-color: #fff;
+}
+
+#title {
+    margin-bottom: 0;
+}
+
+#image {
+    max-width: 50%;
+    max-height: auto;
+    align-items: center;
+}
+
+#img-div,
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    display: block;
+}
+
+#subtitle {
+    font-style: italic;
+    padding: 0;
+    margin: 0 auto 30px auto;
+}
+
+#img-caption {
+    margin-top: 0;
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 800;
+}

@@ -1,0 +1,109 @@
+:root {
+    height: 100vh;
+    background: linear-gradient(
+        140deg,
+        rgb(17, 17, 17),
+        rgb(29, 29, 29)
+    );
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: monospace;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+}
+
+#heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    background: linear-gradient(
+        -90deg,
+        rgba(0, 255, 0, 0.54),
+        #002700
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -.2rem;
+}
+
+#heading {
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+body {
+    height: 100%;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#text-input {
+    margin: 1rem auto .25rem auto;
+    background-color: rgba(38, 38, 38, 0.41);
+    border: 2px solid hsla(0, 0%, 22%, 0.42);
+    border-radius: 10px;
+    color: rgba(0, 255, 0, 0.47);
+    font-family: monospace;
+    font-size: smaller;
+    padding: .3rem;
+}
+
+#check-btn {
+    font-family: monospace;
+    color: rgba(169, 169, 169, 0.58);
+    background-color: rgba(38, 38, 38, 0.43);
+    border: 1.5px solid rgba(98, 98, 98, 0.46);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 100ms ease-in-out;
+    width: 10%;
+    margin: 0.4rem auto;
+    padding: .4rem;
+}
+
+#check-btn:hover {
+    border-color: rgba(250, 240, 230, 0.33);
+    color: rgba(250, 240, 230, 0.55);
+    cursor: pointer;
+}
+
+#check-btn:active {
+    border-color: rgba(0, 255, 0, 0.53);
+    color: rgba(0, 255, 0, 0.51);
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#result {
+    position: absolute;
+    top: 60%; /* Move the top edge to the vertical center */
+    left: 50%; /* Move the left edge to the horizontal center */
+    transform: translate(-50%, -50%); /* Center the element perfectly */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    color: rgba(0, 255, 0, 0.51);
+}

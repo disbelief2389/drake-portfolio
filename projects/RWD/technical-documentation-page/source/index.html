@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Technical Documentation: CSS Flexbox</title>
+        <link rel="stylesheet" href="/projects/RWD/technical-documentation-page/source/styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <nav id="navbar">
+          <header><h1>CSS Flexbox Documentation</h1></header>
+          <a class="nav-link" href="#Introduction_to_CSS_Flexbox">Introduction to CSS Flexbox</a>
+          <a class="nav-link" href="#Getting_Started_with_Flexbox">Getting Started with Flexbox</a>
+          <a class="nav-link" href="#Flex_Container_Properties">Flex Container Properties</a>
+          <a class="nav-link" href="#Flex_Item_Properties">Flex Item Properties</a>
+          <a class="nav-link" href="#Common_Use_Cases_and_Examples">Common Use Cases and Examples</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction_to_CSS_Flexbox">
+                <header>
+                    <h1>
+                        Introduction to CSS Flexbox
+                    </h1>
+                </header>
+                <p>Flexbox is a layout module in CSS that provides a flexible and efficient way to layout items within a container.</p>
+                <p>It simplifies creating responsive layouts that adapt to different screen sizes.</p>
+                <code>display: flex;</code>
+                <ul>
+                  <li>Key feature: Flexibility</li>
+                  <li>Key feature: Responsiveness</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Getting_Started_with_Flexbox">
+                <header>
+                    <h1>
+                        Getting Started with Flexbox
+                    </h1>
+                </header>
+                <p>To use Flexbox, set the container's display property to flex.</p>
+                <p>Example:</p>
+                <code>.container { display: flex; }</code>
+                <ul>
+                  <li>Step 1: Define a flex container</li>
+                  <li>Step 2: Style flex items</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Flex_Container_Properties">
+                <header>
+                    <h1>
+                        Flex Container Properties
+                    </h1>
+                </header>
+                <p>Properties like flex-direction control the layout of items.</p>
+                <p>Example properties:</p>
+                <code>flex-direction: row;</code>
+                <ul>
+                  <li>flex-direction</li>
+                  <li>justify-content</li>
+                  <li>align-items</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Flex_Item_Properties">
+                <header>
+                    <h1>
+                        Flex Item Properties
+                    </h1>
+                </header>
+                <p>Properties like order control the item's position.</p>
+                <p>Example:</p>
+                <code>order: 2;</code>
+                <ul>
+                  <li>order</li>
+                  <li>flex-grow</li>
+                  <li>flex-shrink</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Common_Use_Cases_and_Examples">
+                <header>
+                    <h1>
+                        Common Use Cases and Examples
+                    </h1>
+                </header>
+                <p>Flexbox is used for navigation menus and equal-height columns.</p>
+                <p>Example:</p>
+                <code>nav { display: flex; }</code>
+                <ul>
+                  <li>Responsive navigation</li>
+                  <li>Equal-height columns</li>
+                  <li>Centering elements</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
