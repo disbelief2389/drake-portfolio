@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            (function() {
+                // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                const base = document.createElement('base');
+                // base.href = isLocal ? '/' : '/mcfarmarchive/';
+                // could potentially just do base.href = ‘/’;
+                base.href = '/';
+                document.head.appendChild(base);
+            })();
+        </script>
+        
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Drake's Portfolio</title>
@@ -28,33 +39,16 @@
             <span id="currentTrackSecondary" class="selectable"></span>
         </div> -->
         <!-- END AUDIO SECTION -->
-        <main id="main-doc">
+        <main id="root-main">
             <!--START NAV-->
-            <nav id="navbar" class="nav">
-                <div id="nav-accent">
-                    <ul class="nav-list">
-                        <li>
-                            <a href="index.html" class="smooth-scroll">Home</a>
-                        </li>
-                        <div class="vert-line"></div>
-                        <li>
-                            <a href="#projects-container" class="smooth-scroll">Work</a>
-                        </li>
-                        <div class="vert-line"></div>
-                        <li>
-                            <a href="#contact-container" class="smooth-scroll">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="flair"></div>
-            </nav>
+                <div id="navbar"></div>
             <!--END NAV-->
             <!--START WELCOME SECTION-->
             <section id="welcome-section">
                 <div id="welcome-text">
                     <h1 class="title"><span class="norm-weight title-a"></span> <span id="v3i1ix">Drake Hay</span></h1>
                     <h3 class="subtitle">
-                        <span class="norm-weight subtitle-a">
+                        <span class="norm-weight subtitle-a selectable">
                             "With our thoughts, we make the world"
                             <br>
                             - Buddha
@@ -63,13 +57,36 @@
                 </div>                
             </section>
             <!--END WELCOME SECTION-->
+            <!--START ABOUT SECTION-->
+            <div id="about-container" class="container-padding">
+                <div class="container">
+                    <section id="about">
+                        <h1>About</h1>
+                        <div class="heading-hr"></div>
+                        <div id="about-div">
+                            <div id="about-text" class="selectable">
+                                <p>
+                                    v3i1ix (Drake Hay) is a critic of oppressive systems, particularly the LDS Church, which he was born into. His Patreon supports those questioning religious indoctrination. Born to a Mormon family, his childhood was shattered at age two when his father witnessed his mother’s sexual assault in church. She later vilified his father, divorced him, and remarried, perpetuating lies about his character. Drake condemns societal hypocrisy that scapegoats men until they’re driven to suicide—a fate he narrowly escaped.
+                                </p>
+                                <p>
+                                    Rejecting complacency, he challenges institutions that prioritize control and profit (e.g., the LDS Church’s tithing system) over humanity. His DMT experiences inspired his alias, v3i1ix, reflecting peeled-back "veils" of illusion. He condemns child abuse, societal apathy, and the comfort-driven ignorance of suffering, quoting Terence McKenna: “<span class="italic">Control is what they’re after.</span>” Unfiltered and defiant, Drake advocates raw truth over dogma, refusing to sanitize reality.
+                                </p>
+                            </div>
+                            <div id="about-img">
+                                <img src="data/images/2025_ProfilePicture.png" alt="Drake Hay" id="profile-pic">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!--END ABOUT SECTION-->
             <!--START PROJECTS SECTION-->
             <div id="projects-container" class="container-padding">
                 <div class="container">
                     <section id="projects">
                         <h1>Projects</h1>
                         <div class="heading-hr"></div>
-                        <fieldset id="js">
+                        <fieldset id="js" class="grid">
                             <legend>
                                 JavaScript Algorithms and Data Structures<br>
                                 <span class="fieldset-subtitle">Developer Certification</span>
@@ -118,7 +135,7 @@
                             </div>
     
                         </fieldset>
-                        <fieldset id="rwd">
+                        <fieldset id="rwd" class="grid">
                             <legend>
                                 Responsive Web Design<br>
                                 <span class="fieldset-subtitle">Developer Certification</span>
@@ -211,13 +228,12 @@
             </div>
             <!-- END CONTACT SECTION -->
             <!--START FOOTER SECTION-->
-            <footer>
-                
-            </footer>
+            <div id="footer"></div>
             <!--END FOOTER SECTION-->
         </main>
         <div id="copy-feedback" aria-live="polite"></div>
-        <script src="data.js"></script>
+        <script src="load-common.js"></script>
+        <script src="data/data.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

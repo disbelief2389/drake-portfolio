@@ -1,0 +1,14 @@
+<script>
+    (function() {
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const base = document.createElement('base');
+        // base.href = isLocal ? '/' : '/mcfarmarchive/';
+        base.href = '/';
+        document.head.appendChild(base);
+    })();
+</script>
+<footer>
+    <p>
+        &copy; 2025 <a href="index.html">v3i1ix</a>
+    </p>
+</footer>

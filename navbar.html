@@ -1,0 +1,36 @@
+<script>
+    (function() {
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const base = document.createElement('base');
+        // base.href = isLocal ? '/' : '/mcfarmarchive/';
+        base.href = '/';
+        document.head.appendChild(base);
+    })();
+</script>
+<!--START NAV-->
+<nav id="navbar" class="nav">
+    <div id="nav-accent">
+        <ul class="nav-list">
+            <li>
+                <a href="index.html" class="smooth-scroll">Home</a>
+            </li>
+            <div class="vert-line"></div>
+            <li>
+                <a href="index.html#about-container" class="smooth-scroll">About</a>
+            </li>
+            <div class="vert-line"></div>
+            <li>
+                <a href="index.html#projects-container" class="smooth-scroll">Work</a>
+            </li>
+            <div class="vert-line"></div>
+            <li>
+                <a href="index.html#contact-container" class="smooth-scroll">Contact</a>
+            </li>
+            <li>
+                <a href="blog/blog-index.html" class="smooth-scroll">Blog</a>
+            </li>
+        </ul>
+    </div>
+    <div id="flair"></div>
+</nav>
+<!--END NAV-->

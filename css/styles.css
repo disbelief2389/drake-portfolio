@@ -2,7 +2,7 @@
     --main-white: #ffffff;
     --main-green: rgb(0, 255, 0);
     --second-green: green;
-    --main-gray: #020302;
+    --main-gray: #010101;
     background-color: var(--main-gray);
 }
 
@@ -100,19 +100,29 @@ html {
     -ms-user-select: text; /* Internet Explorer/Edge */
 }
 
+.unselectable {
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari and older versions of Chrome */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
 body {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     min-height: 100vh;
-    background: linear-gradient(
+    /* background: linear-gradient(
     160deg,
     rgb(6, 6, 6),
     rgb(0, 0, 0)
-  );
+  ); */
+  background-image: url(/data/images/v3i1ixPortfolioBackground.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 /*body,
@@ -135,7 +145,7 @@ html {
 }
 
 .container-padding {
-    padding: 150px 0px;
+    padding: 50px 0px;
     max-width: 100%;
 }
 
@@ -231,7 +241,7 @@ main {
 
 #nav-accent {
     position: fixed;
-    min-width: 50%;
+    width: clamp(800px, 60%, 1000px);
     height: 80px;
     border: 1px solid rgba(0, 255, 0, 0.068);
     border-bottom: 2px solid transparent;
@@ -245,8 +255,8 @@ main {
         to right,
         rgba(0, 0, 0, 0.329),
         rgba(0, 0, 0, 0.815) 5%,
-        var(--main-gray) 33%,
-        var(--main-gray) 66%,
+        var(--main-gray) 15%,
+        var(--main-gray) 85%,
         rgba(0, 0, 0, 0.808) 95%,
         rgba(0, 0, 0, 0.322)
     );
@@ -276,11 +286,13 @@ nav ul li {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 
 nav ul li a {
     color: rgba(0, 128, 0, 0.733);
     text-decoration: none;
+    text-align: center;
     font-size: 1.2rem;
     margin: 0.5rem 0.5rem;
     padding: 0.5rem 0.5rem;
@@ -424,11 +436,38 @@ fieldset {
     color: green;
     border-radius: 15px;
     border-color: #00ff000d;
+    margin: 6rem;
+    transition: border-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+fieldset p {
+    margin: 4rem;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+fieldset ol {
+    margin: 1rem 9rem;
+    margin-top: -2rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+ol li ul {
+    margin: 0 4rem;
+}
+
+fieldset.grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0rem; /* Adds space between cards */
-    margin: 6rem;
-    transition: border-color .5s ease-in-out, color .5s ease-in-out;
 }
 
 fieldset:hover {
@@ -440,6 +479,9 @@ legend {
     font-weight: bolder;
     font-size: x-large;
     padding: 1rem;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
 }
 
 .fieldset-subtitle {
@@ -682,6 +724,11 @@ select:focus {
     margin: 2rem auto;
 }
 
+#contact-info p {
+    margin: 0;
+
+}
+
 #custom-hr-2 {
     max-width: 40%;
     min-width: 340px;
@@ -765,3 +812,89 @@ pre {
     padding: 0;
     max-width: 100%;
   }
+
+#profile-pic {
+    max-width: 50%;
+    display: block;
+    margin: 10rem auto;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: border-color .5s ease-in-out;
+}
+
+#profile-pic:hover {
+    border-color: rgba(0, 255, 0, 0.148);
+}
+
+#about-text p {
+    margin: 4rem 6rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.text-note {
+    margin-bottom: 3rem;
+}
+
+.text-note *{
+    font-size: .8rem;
+    margin-top: -.5rem;
+    margin-bottom: .1rem;
+    line-height: 1.2rem;
+}
+
+.text-note p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+a.return-link {
+    width: clamp(150px, 10%, 200px);
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    text-decoration: none;
+    border: 1px solid green;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out, color 0.1s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a.return-link:hover {
+    background-color: #008000;
+    color: black;
+}
+
+a.return-link:active {
+    background-color: #00FF00;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.61);
+    width: clamp(300px, 80%, 1000px);
+    margin: 1rem auto;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 128, 0, 0.056);
+    border-radius: 20px;
+    transition: border-color 0.5s ease-in-out;
+}
+
+footer:hover {
+    border-color: #00ff001c;
+}
+
+footer * {
+    color: green;
+    transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+    color: #00ff00;
+}
