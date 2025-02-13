@@ -904,3 +904,13 @@ footer a:hover {
     max-width: 350px;
     max-height: 350px;
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: #00ff00;
+}
+  
+::selection {
+    color: black;
+    background: #00ff00;
+}
