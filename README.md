@@ -29,7 +29,7 @@ A modern personal portfolio/card site with dark theme aesthetics, featuring dyna
 
 1. Clone repository:
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/disbelief2389/drake-portfolio/
 ```
 
 2. Replace placeholder content:
