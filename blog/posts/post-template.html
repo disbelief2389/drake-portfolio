@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const base = document.createElement('base');
+            // base.href = isLocal ? '/' : '/mcfarmarchive/';
+            // could potentially just do base.href = ‘/’;
+            base.href = '/';
+            document.head.appendChild(base);
+        })();
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostName - Drake's Blog</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="favicon" href="data/images/logos/favicon.ico" />
+</head>
+<body>
+    <main class="blog-main">
+        <!--START NAV-->
+        <div id="navbar"></div>
+        <!--END NAV-->
+        <!-- START BLOG POSTCARDS -->
+        <div id="blog-posts-container" class="container-padding">
+            <div class="container">
+                <section id="blog-posts">
+                    <h1>PostName</h1>
+                    <div class="heading-hr"></div>
+                    <fieldset id="blog-posts-fieldset">
+                        <legend>
+                            Month Date<br>
+                            <span class="fieldset-subtitle">2025</span>
+                        </legend>
+                            <p>
+
+                            </p>
+                            <p>
+                                Yours truly,<br><br>
+                                v3i1ix
+                            </p>
+                    </fieldset>
+                    <a href="blog/blog-index.html" class="return-link">Return to Blog</a>
+                </section>
+                <!--END PROJECTS SECTION-->
+                
+            </div>
+        </div>
+        <!-- END BLOG POSTCARDS -->
+        <!--START FOOTER-->
+        <div id="footer"></div>
+        <!--END FOOTER-->
+    </main>
+    
+    <script src="load-common.js"></script>
+    <script src="data/data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
