@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        (function() {
+            // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const base = document.createElement('base');
+            // base.href = isLocal ? '/' : '/mcfarmarchive/';
+            // could potentially just do base.href = ‘/’;
+            base.href = '/';
+            document.head.appendChild(base);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../css/styles.css">
-    <link rel="stylesheet" href="../../../css/project-page.css">
-    <link rel="favicon" href="../../../data/images/logos/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-page.css">
+    <link rel="icon" href="data/images/logos/v3i1ix logo_transparentBackground.ico">
     <title>Technical Documentation Page Project</title>
 </head>
 <body>
     <!--START NAV-->
-    <nav id="navbar" class="nav">
-        <div id="nav-accent">
-            <ul class="nav-list">
-                <li>
-                    <a href="../../../index.html" class="smooth-scroll">Home</a>
-                </li>
-                <div class="vert-line"></div>
-                <li>
-                    <a href="../../../index.html#projects-container" class="smooth-scroll">Work</a>
-                </li>
-                <div class="vert-line"></div>
-                <li>
-                    <a href="../../../index.html#contact-container" class="smooth-scroll">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div id="flair"></div>
-    </nav>
+    <div id="navbar"></div>
     <!--END NAV-->
     <div class="container-padding">
         <div class="container">
@@ -42,7 +35,7 @@
             </div>
             <div class="project-frame">
                 <figure class="iframe-container">
-                    <iframe src="source/index.html" frameborder="0" id="project-frame"></iframe>
+                    <iframe src="projects/RWD/technical-documentation-page/source/index.html" frameborder="0" id="project-frame" onload="resizeIframe(this)"></iframe>
                     <!-- <figcaption>
                     </figcaption> -->
                 </figure>
@@ -54,5 +47,8 @@
             </div>
         </div>
     </div>
+    <div id="footer"></div>
+    <script src="load-common.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

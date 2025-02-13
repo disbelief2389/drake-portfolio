@@ -10,6 +10,7 @@
 
 .iframe-container {
     width: clamp(300px, 100%, 1000px);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +27,7 @@ figcaption {
 
 #project-frame {
     width: 80%;
-    height: clamp(25vh, 50vh, 80vh);
+    height: 100%;
     border-radius: 10px;
     margin: 0 auto;
 }
