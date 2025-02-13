@@ -1,6 +1,6 @@
 # v3i1ix | Portfolio/Card Site
 
-![Site Preview](https://example.com/screenshot.jpg) <!-- Add your own screenshot URL -->
+![Site Preview](/data/images/firefox_fPrlxZZ6x6.png) <!-- Add your own screenshot URL -->
 
 A modern personal portfolio/card site with dark theme aesthetics, featuring dynamic gradient backgrounds and smooth interactions. Hosted on GitHub Pages.
 
