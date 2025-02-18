@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const base = document.createElement('base');
+            // base.href = isLocal ? '/' : '/mcfarmarchive/';
+            // could potentially just do base.href = ‘/’;
+            base.href = '/';
+            document.head.appendChild(base);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-page.css">
+    <link rel="icon" href="data/images/logos/v3i1ix logo_transparentBackground.ico">
+    <title>Limiter Stacking</title>
+</head>
+<body>
+    <!--START NAV-->
+    <div id="navbar"></div>
+    <!--END NAV-->
+    <div class="container-padding">
+        <div class="container">
+            <h1>Limiter Stacking</h1>
+            <div class="heading-hr"></div>
+            <div class="project-intro">
+                <p>
+                    <strong>AI TL; DR</strong><br>
+                    "Limiter stacking" is a music production technique where multiple limiters are applied in sequence on a track or master channel, each reducing the gain by less than 1dB. This approach spreads the limiting workload across multiple instances, preserving the natural dynamics and liveliness of the audio while achieving higher loudness levels without introducing noticeable artifacts or a squashed sound. The author discovered that using numerous instances of a transparent limiter like FabFilter Pro-L 2 allows for cleaner, louder mixes (-5 LUFS and louder) and enhances the overall sound quality. This method also encourages committing to creative decisions by bouncing and flattening tracks, leading to a more focused and musical composition process.
+                </p>
+                <div class="heading-hr"></div>
+                <p>
+                    So, if you're unfamiliar with what a limiter is, it basically does what it says, it limits the audio beyond a certain volume 'threshold', so that none (or very little) audio goes beyond said volume. I remember the first time I started making music in FL Studio, I was so confused why my songs were sounding so 'squished'. I only realised months after using FL that the default project template I had been using has a limiter on the 'master channel' (the channel where all of the audio eventually goes, basically the final output).
+                </p>
+                <p>
+                    So, limiters can have varying effects based on their limiting algorithm settings, how much audio it must limit in order to keep it under the declared threshold, etc... It is common knowledge among producers, engineers and intermediate to advanced music makers that pushing audio too heavily into a limiter or compressor will make the audio sound 'squished', or lifeless, flat. There are a myriad of words to describe the sound of an overcompressed signal.
+                </p>
+                <p>
+                    For years this has been the bane of my existence, as with all other producers I'm sure, to varying degrees. How does one get audio to sound as loud as possible whilst not losing dynamics, or at least the perception of dynamics? Because, dynamics are what create the song. Motion, movement, dynamics, variation, tension and release. These are the things that are the core of the song.
+                </p>
+                <p>
+                    Artists like Skrillex have amazed the world at how loud they have been able to make their tracks, whilst also preserving the kind of natural dynamics that I'm talking about. How? I wish I could tell you the entire process, but knowledge has become so fragmented that it would probably take a single person 3 or more lifetimes to have a full grasp on every detail of what makes a song able to have -3 LUFS (Loudnes Units Full Scale)(an industry standard measurement unit of loudness).
+                </p>
+                <p>
+                    However, while I don't have a 'full' grasp, over the years my grasp has deepened steadily. Certain breakthrough points were marked by when I learned about gain staging, a technique used by Skrillex and now likely all intermediate to advanced engineers/producers/composers. The specific preset of a limiter Skrillex used on a track blew me away at how effective it was at preserving natural dynamics whilst being able to limit the signal fairly heavily, making the sound effectively louder.
+                </p>
+                <p>
+                    However, there is another concept that recently I have paired with this limiter. In mastering (a stage in the music production process where finishing touches and final stage processing is applied), it is often called an 'art' in and of itself, because mastering engineers typically need a really keen ear to make a song sound good whilst being as loud as possible, typically speaking.
+                </p>
+                <p>
+                    Often I find when mastering my own tracks that affecting the audio more than 1dB in any given step in processing is too much, and the artifacts from said processor will be far to obvious to the ear. So, if I ever limit or affect the master in a way that I am proud of (ie. not being lazy), it will usually be under 1dB of gain reduction. This makes whatever you're doing to the audio substantially more 'invisible' to the listener, effectively creating an impossible phase-space where you're not able to really determine what is real and what isn't.
+                </p>
+                <p>
+                    Big claims, but it's true. I believe this is why Skrillex and others have amazed the world in the way that they have, because they have put 2 and 2 together when it comes to sound. I'm often a bit of a nutcase when it comes to audio and how quantum physicists have discovered that reality is made up of waves and frequency (hint: sound). It has also long fascinated me that Egyptians are rumoured to have used sound to move physical objects, an idea that is highly trying to our modern rational mind.
+                </p>
+                <div class="heading-hr"></div>
+                <p>
+                    Anyway, so what actually is 'Limiter Stacking'?
+                </p>
+                <p>
+                    To be honest it is simply a term I coined for the writing of this post. But, what it boils down to is using the limiter preset (that I love so dearly and works so well on it's own at being transparent, often times to the point where you can push a signal as far into it as you like and it will sound decent), combined with this rationale of never limiting more than 1dB. In practice, this simply equals using multiple limiters applying a tiny amount of reduction.
+                </p>
+                <p>
+                    Delegating the load of the limiting across multiple instances of limiters seems to greatly increase quality, but also CPU usage. So, being a converter to Ableton in the past 5 years, this isn't a concern to me at all, given how easy it is to bounce tracks to audio, or to 'flatten'. This, for those of you who don't know, basically bakes the effects into the audio, taking the processing load entirely out of the equasion. 
+                </p>
+                <p>
+                    It also forces you to commit more to your actions, which is what makes things like painting so beautiful, because, you have to work with what you've got, and, get truly creative, and not just do what you've always done. You're working with the frequencies themselves, not the effects any more. Getting lost in these myriads of effects is something a lot of EDM producers are prone to doing, resulting in less musically pleasing music, and more cool sounding effects instead.
+                </p>
+                <p>
+                    Good music is obviously what I'm after, so being able to get clean loudness effortlessly like this and to just be able to forget about it is a God-send to me. I can just duplicate the limiters, bounce/flatten, and move on with clean and loud music. So, this is a huge breakthrough for my personal production process.
+                </p>
+                <p>
+                    I'll now show you the most recent track where I've put this to use, combined with a screenshot of how many instances of limiters I would have on each layer (an un-Godly ammount), and then what each limiter is doing, and how that influences the sound in the way that it does.
+                </p>
+                <iframe class="bandlab-player" width="560" height="202" src="https://www.bandlab.com/embed/?id=190b77e3-f7ec-ef11-88f6-6045bd3473c0" allowfullscreen></iframe>
+                <p>
+                    So, as you can hear, the track is super loud (it comes in at around -5.5 LUFS integrated, which for my history is quite loud), and it doesn't sound too bad. There is a lot that I will go back and adjust the dynamics of, like the snare, and then things about the composition like the main melody, I find it is a bit hard to follow. But from a mix perspective, for a first draft... not bad.
+                </p>
+                <p>
+                    So, here's what the actual processing looked like in Ableton:
+                </p>
+                <a href="projects/Music/2025/Limiter Stacking/WCcqoo6U9T.png" target="_blank">
+                    <img class="not-grid" src="projects/Music/2025/Limiter Stacking/WCcqoo6U9T.png" alt="Ableton Image">
+                </a>
+                <p>
+                    So, as you can see, on the master I have 25 instances of Fabfilter Pro-L 2 (a popular limiting plugin), each only doing 0.7dB of gain reduction at most. Since this particular limiting preset is already super 'transparent' (meaning that it's harder to hear its influence), taking it this one step further by spreading out the processing load across--a quite frankly insane amount of--limiters, effectively allowing the computer to have more delegation towards this idea of sounding more natural.
+                </p>
+                <p>
+                    The proof is in the pudding, I used this on the drums, bass, main melody, percussion... then I would just bounce and commit those effects into the sound. If I end up not liking it later, that's fine, I can just get rid of said element and replace it with something else if need be. The point is that I'm baking extreme amounts of subtle and transparent limiting into the audio layers themselves, allowing for super loud mixes that sound super clean.
+                </p>
+                <p>
+                    Mind you, this track is like the first one that I've really put this method to the test. You'll notice the snare doesn't sound as punchy, that's because I only used 1 limiter on it. Later on, I will go back in and use this technique to get some really cool snares in there. I also am yet to get into automation and other effects to further make the track more interesting, but I'll get there.
+                </p>
+                <p>
+                    Combining these new techinques with old, such as making sure to produce predominantly through my laptop speakers, so as to not get lost in the details of hi-fidelity sonics, but rather to stay grounded in the core elements that transcend most playback capacity (melody, musicality, rhythm, arrangement, etc. [composition]).
+                </p>
+                <p>
+                    Anyway, that's really all for this particular project, I hope you enjoyed it, and thank you for spending the time to get this far if you did.
+                </p>
+                <p>
+                    Have a lovely day!
+                </p>
+                <p>
+                    Yours truly,
+                </p>
+                <p>
+                    v3i1ix
+                </p>
+            </div>
+            <div class="project-outro">
+                <p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="centered-container">
+        <a href="index.html" class="return-link containerless-return smooth-scroll">return to home</a>
+    </div>
+    <div id="footer"></div>
+    <script src="load-common.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
