@@ -326,8 +326,9 @@ nav ul li a {
     text-decoration: none;
     text-align: center;
     font-size: 1.2rem;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 0.2rem;
     padding: 0.5rem 0.5rem;
+    padding-left: 1rem;
     letter-spacing: 0.7rem;
     border: solid 1px transparent;
     /*ADD PADDING + MARGIN TO CUSTOMISE HOVER HIGHLIGHT SIZE*/
@@ -413,16 +414,6 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-top: -3rem;
     scale: .8;
-    /* background: linear-gradient(
-        to right,
-        #0083003b,
-        green 20%,
-        rgba(0, 255, 0, 0.568) 80%,
-        #0088001f
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; */
 }
 
 #welcome-text {
@@ -968,7 +959,9 @@ footer a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 5rem auto;
+    border: 1px solid green;
+    border-radius: 20px;
 }
 
 .inner-fieldset {
