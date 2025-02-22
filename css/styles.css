@@ -413,7 +413,23 @@ nav ul li a:hover {
     font-weight: normal;
     font-size: 2rem;
     margin-top: -3rem;
+    margin-bottom: 2rem;
     scale: .8;
+}
+
+.subtitle-b {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    scale: 0.8;
+}
+
+.subtitle-c {
+    font-size: 75%;
 }
 
 #welcome-text {
@@ -669,20 +685,25 @@ textarea:hover {
 button {
     background-color: rgba(0, 0, 0, 0.452);
     border: 1px solid rgba(0, 255, 0, 0.452);
-    border-radius: 12px;
+    border-radius: 5px;
     color: green;
-    padding: .5rem 1rem;
+    padding: .25rem 0.5rem;
     transition: border-color .2s ease-in-out, color .5s ease-in-out, background-color .2s ease-in-out;
     cursor: pointer;
     scale: 1.15;
+    margin: 0.5rem;
 }
 
-button:hover {
+button.no-format {
+    border-color: transparent;
+}
+
+button:hover:not(button.no-format) {
     border-color: #00ff00;
     color: #00ff00;
 }
 
-button:active {
+button:active:not(button.no-format) {
     background-color: #00ff00;
     color: black;
 }

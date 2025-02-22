@@ -29,6 +29,19 @@
                 <div id="welcome-text">
                     <h1 class="title"><span class="norm-weight title-a"></span> <span id="v3i1ix">Drake Hay</span></h1>
                     <h3 class="subtitle">
+                        <span class="norm-weight subtitle-b selectable">
+                            aka v3i1ix
+                            <span class="subtitle-c">
+                                /veɪlɪks/
+                                <button class="no-format" onclick="playAudio()">🔊</button>
+                                <audio id="pronunciationAudio">
+                                    <source src="data/audio/veilicks_pronounce.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </span>
+                        </span>
+                    </h3>
+                    <h3 class="subtitle">
                         <span class="norm-weight subtitle-a selectable">
                             "With our thoughts, we make the world"
                             <br>
@@ -235,6 +248,13 @@
             <!--END FOOTER SECTION-->
         </main>
         <div id="copy-feedback" aria-live="polite"></div>
+        <script>
+            function playAudio() {
+                var audio = document.getElementById("pronunciationAudio");
+                audio.currentTime = 0;
+                audio.play();
+            }
+        </script>
         <script src="load-common.js"></script>
         <script src="data/data.js"></script>
         <script src="script.js"></script>
