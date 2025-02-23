@@ -9,11 +9,14 @@ function initializeSidebar() {
   const workBtn = document.getElementById('work-btn');
   const contactBtn = document.getElementById('contact-btn');
   const blogBtn = document.getElementById('blog-btn');
+  const overlay = document.getElementById('overlay');
   const currentURL = window.location.href;
+
 
   function updateButtonStates () {
     if (navbar.classList.contains('show')) {
 
+      // when sidebar is open:
       openBtn.style.display = 'none';
       closeBtn.style.display = 'flex';
 
@@ -24,8 +27,14 @@ function initializeSidebar() {
         }, 300);
       }
 
+      setTimeout(() => {
+        overlay.style.opacity = 1;
+        overlay.style.pointerEvents = 'auto';
+      })
+
     } else {
 
+      // when sidebar is closed:
       openBtn.style.display = 'flex';
       closeBtn.style.display = 'none';
 
@@ -35,6 +44,9 @@ function initializeSidebar() {
           audioControls.classList.remove('hidden');
         }, 300);
       }
+
+      overlay.style.opacity = 0;
+      overlay.style.pointerEvents = 'none';
     }
   }
 
@@ -50,6 +62,7 @@ function initializeSidebar() {
 
   openBtn.addEventListener('click', openSidebar);
   closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
   
   if (currentURL.endsWith('/index.html') || currentURL.endsWith('/') || currentURL.includes('contact-container') || currentURL.includes('projects-container') || currentURL.includes('about-container')) {
     aboutBtn.addEventListener('click', closeSidebar);
