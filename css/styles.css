@@ -243,36 +243,43 @@ main {
     text-transform: uppercase;
 }
 
-.vert-line {
-    width: 20px;
-    height: 100px;
-    border: 1px solid transparent;
-    background: linear-gradient(
-        to top,
-        transparent,
-        transparent,
-        #00ff000e,
-        transparent,
-        transparent
-    );;
-    overflow: hidden;
+/* Navbar List */
+.nav-list {
+    display: flex;
+    align-items: flex;
+    justify-items: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#flair {
-    position: fixed;
-    z-index: -1;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent 5%,
-        green,
-        transparent 95%
-    );
+/* Navbar Items */
+.nav-list li {
+    position: relative;
 }
+
+/* Navbar Links */
+.nav-list li a {
+    color: rgba(0, 128, 0, 0.733);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.7rem; /* As per your design */
+    border: solid 1px transparent;
+    transition: border-color 0.1s ease;
+    border-radius: 5px;
+}
+
+/* Hover Effects */
+.nav-list li a:hover {
+    border-color: #00ff002c;
+    color: rgba(0, 255, 0, 0.582);
+}
+
+
 
 #nav-accent {
-    position: fixed;
+    position: relative;
     width: clamp(800px, 60%, 1000px);
     height: 80px;
     border: 1px solid rgba(0, 255, 0, 0.068);
@@ -294,6 +301,7 @@ main {
     );
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     transition: border-color 0.5s ease;
+    z-index: 1000;
 }
 
 #nav-accent:hover {
@@ -308,10 +316,14 @@ nav ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2%;
+    gap: 0;
     position: relative; /* Ensure the ul is positioned correctly */
     z-index: 1101; /* Ensure the nav links are above the navbar */
     vertical-align: middle;
+}
+
+nav ul * {
+    margin: .5rem;
 }
 
 nav ul li {
@@ -343,38 +355,76 @@ nav ul li a:hover {
     color: rgba(0, 255, 0, 0.582);
 }
 
+#flair {
+    position: fixed;
+    z-index: -1;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 5%,
+        green,
+        transparent 95%
+    );
+}
+
+/* Divider Styles */
+.vert-line {
+    position: relative;
+    width: 1px;
+    height: 750px; /* Adjust height as needed */
+    background: linear-gradient(
+        to top,
+        transparent,
+        transparent 40%,
+        #00ff0023,
+        transparent,
+        transparent
+    );
+}
+
 #audioPlayer {
     display: none;
 }
 
 .audio-controls {
-    max-width: 200px;
-    min-width: 199px;
-    min-height: 150px;
     position: fixed;
-    top: 38%;
-    left: 85%;
-    z-index: 20000;
-    display: flex;
-    flex-direction: column;
+    top: 60px;
+    left: 1%;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    display: flex; /* Changed from inline-flex */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    flex-wrap: nowrap;
+    white-space: nowrap; /* Corrected property */
+    padding: 0; /* Adjusted padding */
+    margin: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
+    overflow: hidden; /* Handles excess spacing */
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.167);
+    background-color: rgba(0, 0, 0, 0);
     border: 1px inset transparent;
     border-radius: 10px;
     transition: all .3s ease-in-out;
-    /* bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%); */
+}
+
+.audio-controls * {
+    margin: .1rem .3rem;
 }
 
 .audio-controls:hover {
     background-color: rgba(0, 0, 0, 0.736);
     border-color: green;
     color: green;
-    /* transform: translateY(30px); */
+}
+
+
+.audio-controls:hover * {
+    color: green !important; /* Change color of all child elements */
+    border-color: green !important; /* Change border color of all child elements */
 }
 
 #playPauseBtn {
@@ -383,7 +433,6 @@ nav ul li a:hover {
     font-size: 24px;
     color: #00ff0018;
     cursor: pointer;
-    margin-right: 10px;
     transition: color .2s ease-in-out;
   }
   
@@ -394,8 +443,17 @@ nav ul li a:hover {
 #currentTrack {
     color: #00ff001b;
     font-size: 14px;
-    margin: 10px;
-    transition: color .2s ease-in-out; 
+    transition: color .2s ease-in-out;
+}
+
+/* Default styling when the span is empty */
+#currentTrack:empty {
+    margin-right: -.5rem;
+}
+
+/* Styling when the span has content */
+#currentTrack:not(:empty) {
+    margin-right: 1rem;  /* Adjust this value as needed */
 }
 
 #currentTrack:hover {
