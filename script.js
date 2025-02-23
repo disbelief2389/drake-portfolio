@@ -25,32 +25,37 @@ function fadeOut() {
   gainNode.gain.linearRampToValueAtTime(0, currentTime + 0.3);
 }
 
-function playTrack(index) {
+function prepareTrack(index) {
   const track = playlist[index];
   audio.src = track.src;
-  audio.currentTime = track.start;
+  audio.currentTime = track.start; // Set the start time here
   const trackTitle = track.src.split('/').pop().split('.')[0];
   document.getElementById('currentTrack').innerText = trackTitle;
 }
 
+
 playPauseBtn.addEventListener('click', function() {
   if (audio.paused) {
-    playTrack(currentTrackIndex);
+    if (audio.currentTime === 0) {
+      // Only set the source and start time if the audio hasn't started yet
+      prepareTrack(currentTrackIndex);
+      audio.currentTime = playlist[currentTrackIndex].start;
+    }
     audio.play();
     fadeIn();
-    playPauseBtn.textContent = '◼';
+    playPauseBtn.textContent = '❚❚';
   } else {
     fadeOut();
     setTimeout(() => {
       audio.pause();
       playPauseBtn.textContent = '▶';
-    }, 300); // Wait for fade-out to complete (0.3 seconds)
+    }, 300); // Wait for fade-out to complete
   }
 });
 
 audio.addEventListener('ended', function() {
   currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
-  playTrack(currentTrackIndex);
+  audio.currentTime = 0;
   audio.play();
   fadeIn();
 });
@@ -60,7 +65,7 @@ volumeSlider.addEventListener('input', function() {
 });
 
 gainNode.gain.value = volumeSlider.value / 100;
-playTrack(currentTrackIndex);
+prepareTrack(currentTrackIndex);
 
 /*
 next:
