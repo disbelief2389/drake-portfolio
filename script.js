@@ -1,9 +1,35 @@
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.getElementById('nav-accent');
+  const openBtn = document.getElementById('open-sidebar-btn');
+  const closeBtn = document.getElementById('close-sidebar-btn');
+
+  function openSidebar() {
+    navbar.classList.add('show');
+    console.log(navbar.classList);
+    console.log('openSidebar button success');
+  }
+
+  function closeSidebar() {
+    navbar.classList.remove('show');
+    console.log(navbar.classList);
+    console.log('closeSidebar button success');
+  }
+
+  openBtn.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  console.log('Navbar: ', navbar);
+  console.log('Open Button: ', openBtn);
+  console.log('Close Button: ', closeBtn);
+});
+
 // Audio
 const audio = document.getElementById("audioPlayer");
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const gainNode = audioContext.createGain();
 const audioSource = audioContext.createMediaElementSource(audio);
-const volumeSlider = document.getElementById('volumeSlider');
+// const volumeSlider = document.getElementById('volumeSlider');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const playlist = [
   { src: '/data/audio/deadmau5 - Everything Before.mp3', start: 135, }
@@ -60,11 +86,11 @@ audio.addEventListener('ended', function() {
   fadeIn();
 });
 
-volumeSlider.addEventListener('input', function() {
-  gainNode.gain.value = volumeSlider.value / 100;
-});
+// volumeSlider.addEventListener('input', function() {
+//   gainNode.gain.value = volumeSlider.value / 100;
+// });
 
-gainNode.gain.value = volumeSlider.value / 100;
+// gainNode.gain.value = volumeSlider.value / 100;
 prepareTrack(currentTrackIndex);
 
 /*
