@@ -1,28 +1,20 @@
-
-
-document.addEventListener('DOMContentLoaded', function () {
+// Sidebar functionality
+function initializeSidebar() {
   const navbar = document.getElementById('nav-accent');
   const openBtn = document.getElementById('open-sidebar-btn');
   const closeBtn = document.getElementById('close-sidebar-btn');
 
   function openSidebar() {
-    navbar.classList.add('show');
-    console.log(navbar.classList);
-    console.log('openSidebar button success');
+      navbar.classList.add('show');
   }
 
   function closeSidebar() {
-    navbar.classList.remove('show');
-    console.log(navbar.classList);
-    console.log('closeSidebar button success');
+      navbar.classList.remove('show');
   }
 
   openBtn.addEventListener('click', openSidebar);
   closeBtn.addEventListener('click', closeSidebar);
-  console.log('Navbar: ', navbar);
-  console.log('Open Button: ', openBtn);
-  console.log('Close Button: ', closeBtn);
-});
+}
 
 // Audio
 const audio = document.getElementById("audioPlayer");
