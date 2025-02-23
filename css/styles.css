@@ -333,6 +333,8 @@ main {
 }
 
 .audio-controls {
+    opacity: 1;
+    pointer-events: auto;
     position: fixed;
     top: 80px;
     left: 20px;
@@ -354,6 +356,11 @@ main {
     border: 1px inset transparent;
     border-radius: 10px;
     transition: all .3s ease-in-out;
+}
+
+.audio-controls.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .audio-controls * {

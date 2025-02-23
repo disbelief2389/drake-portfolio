@@ -13,13 +13,28 @@ function initializeSidebar() {
 
   function updateButtonStates () {
     if (navbar.classList.contains('show')) {
+
       openBtn.style.display = 'none';
       closeBtn.style.display = 'flex';
-      audioControls ? audioControls.style.display = 'none' : console.log('audioControls not present.');
+
+      if (audioControls) {
+        audioControls.style.opacity = 0;
+        setTimeout(() => {
+          audioControls.classList.add('hidden');
+        }, 300);
+      }
+
     } else {
+
       openBtn.style.display = 'flex';
       closeBtn.style.display = 'none';
-      audioControls ? audioControls.style.display = 'flex' : console.log('audioControls not present.')
+
+      if (audioControls) {
+        audioControls.style.opacity = 1;
+        setTimeout(() => {
+          audioControls.classList.remove('hidden');
+        }, 300);
+      }
     }
   }
 
