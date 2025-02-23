@@ -1,3 +1,4 @@
+// Audio
 const audio = document.getElementById("audioPlayer");
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const gainNode = audioContext.createGain();
@@ -70,6 +71,10 @@ next:
 - find an easier way to change variable names all at once
 */
 
+
+
+
+// Contact details copy to clipboard
 document.querySelectorAll('.contact-detail').forEach(element => {
   element.addEventListener('click', async () => {
     const text = element.textContent.trim(); // Get text (email/phone)
@@ -94,6 +99,9 @@ function showFeedback(message, parentElement) {
   }, 1500);
 }
 
+
+
+// Resize iframe
 function resizeIframe(iframe) {
   iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 }

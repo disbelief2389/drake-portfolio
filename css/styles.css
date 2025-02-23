@@ -6,6 +6,10 @@
     background-color: var(--main-black);
 }
 
+svg {
+    fill: green;
+}
+
 /* Base reset */
 * {
     margin: 0;
