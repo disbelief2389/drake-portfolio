@@ -756,6 +756,7 @@ select:focus {
   }
 
 .profile-link {
+    
     height: 50px;
     width: 80px;
     display: flex;
@@ -1081,8 +1082,44 @@ footer a:hover {
         top: 20px;
     }
 
+    fieldset {
+        margin: 3rem 0;
+    }
+
+    fieldset.grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
     p {
         font-size: 2rem !important;
+        margin: 4rem 0 !important;
+    }
+
+    legend {
+        font-size: 3.5rem;
+    }
+
+    .fieldset-subtitle {
+        font-size: 2rem;
+    }
+
+    .form-element label {
+        font-size: 2rem;
+    }
+
+    .tile-heading {
+        font-size: 3rem;
+    }
+
+    input, textarea {
+        background-color: rgba(0, 0, 0, 0.127);
+        border: 2px solid rgba(0, 255, 0, 0.132);
+        padding: 5px;
+        transition: border-color .5s ease-in-out;
     }
 
     #nav-accent.show {
