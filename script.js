@@ -3,17 +3,47 @@ function initializeSidebar() {
   const navbar = document.getElementById('nav-accent');
   const openBtn = document.getElementById('open-sidebar-btn');
   const closeBtn = document.getElementById('close-sidebar-btn');
+  const audioControls = document.getElementById('audio-controls');
+  const homeBtn = document.getElementById('home-btn');
+  const aboutBtn = document.getElementById('about-btn');
+  const workBtn = document.getElementById('work-btn');
+  const contactBtn = document.getElementById('contact-btn');
+  const blogBtn = document.getElementById('blog-btn');
+  const currentURL = window.location.href;
+
+  function updateButtonStates () {
+    if (navbar.classList.contains('show')) {
+      openBtn.style.display = 'none';
+      closeBtn.style.display = 'flex';
+      audioControls ? audioControls.style.display = 'none' : console.log('audioControls not present.');
+    } else {
+      openBtn.style.display = 'flex';
+      closeBtn.style.display = 'none';
+      audioControls ? audioControls.style.display = 'flex' : console.log('audioControls not present.')
+    }
+  }
 
   function openSidebar() {
       navbar.classList.add('show');
+      updateButtonStates();
   }
 
   function closeSidebar() {
       navbar.classList.remove('show');
+      updateButtonStates();
   }
 
   openBtn.addEventListener('click', openSidebar);
   closeBtn.addEventListener('click', closeSidebar);
+  
+  if (currentURL.endsWith('/index.html') || currentURL.endsWith('/') || currentURL.includes('contact-container') || currentURL.includes('projects-container') || currentURL.includes('about-container')) {
+    aboutBtn.addEventListener('click', closeSidebar);
+    workBtn.addEventListener('click', closeSidebar);
+    contactBtn.addEventListener('click', closeSidebar);
+  }
+
+  // Initial state setup
+  updateButtonStates();
 }
 
 // Audio
