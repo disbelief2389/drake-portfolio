@@ -1096,7 +1096,20 @@ footer a:hover {
 
     p {
         font-size: 2rem !important;
-        margin: 4rem 0 !important;
+        margin: 4rem auto !important;
+    }
+
+    fieldset p {
+        line-height: 1.5;
+    }
+
+    .bandlab-player {
+        scale: 80%;
+    }
+
+    .return-link {
+        scale: 2;
+        border-radius: 5px !important;
     }
 
     legend {
