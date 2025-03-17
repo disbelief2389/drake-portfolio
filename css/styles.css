@@ -192,6 +192,10 @@ h1 {
     text-align: center;
 }
 
+h2, h3 {
+    text-align: center;
+}
+
 #welcome-section {
     height: 70vh;
     width: 100%;
