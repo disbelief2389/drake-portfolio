@@ -1,279 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script>
-            (function() {
-                // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-                const base = document.createElement('base');
-                // base.href = isLocal ? '/' : '/mcfarmarchive/';
-                // could potentially just do base.href = ‘/’;
-                base.href = '/';
-                document.head.appendChild(base);
-            })();
-        </script>
-        
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Drake's Portfolio</title>
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="icon" href="data/images/logos/v3i1ix logo_transparentBackground.ico" />
-    </head>
-    <body>
-        <!-- START AUDIO SECTION -->
-        
-        <div class="audio-controls" id="audio-controls">
-            <audio id="audioPlayer" controls loop></audio>
-            <button id="playPauseBtn">▶</button>
-            <span id="currentTrack" class="selectable"></span>
+  <head>
+    <script>
+      (function () {
+        // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const base = document.createElement("base");
+        // base.href = isLocal ? '/' : '/mcfarmarchive/';
+        // could potentially just do base.href = ‘/’;
+        base.href = "/";
+        document.head.appendChild(base);
+      })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drake's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      href="data/images/logos/v3i1ix logo_transparentBackground.ico"
+    />
+  </head>
+  <body>
+    <!-- START AUDIO SECTION -->
+
+    <div class="audio-controls" id="audio-controls">
+      <audio id="audioPlayer" controls loop></audio>
+      <button id="playPauseBtn">▶</button>
+      <span id="currentTrack" class="selectable"></span>
+    </div>
+    <!-- END AUDIO SECTION -->
+    <main id="root-main">
+      <!--START NAV-->
+      <div id="navbar"></div>
+      <!--END NAV-->
+      <!-- START SIDEBAR OVERLAY -->
+      <div id="overlay"></div>
+      <!-- END SIDEBAR OVERLAY -->
+      <!-- START TOP VIGNETTE -->
+      <div id="top-vignette"></div>
+      <!-- END TOP VIGNETTE -->
+      <!--START WELCOME SECTION-->
+      <section id="welcome-section">
+        <div id="welcome-text">
+          <h1 class="title">
+            <span class="norm-weight title-a"></span>
+            <span id="v3i1ix">Drake Hay</span>
+          </h1>
+          <h3 class="subtitle">
+            <span class="norm-weight subtitle-b selectable">
+              aka v3i1ix
+              <span class="subtitle-c">
+                /veɪlɪks/
+                <button class="no-format" onclick="playAudio()">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    fill="green"
+                    data-view-component="true"
+                  >
+                    <path
+                      d="M3.25 9a.75.75 0 0 1 .75.75c0 2.142.456 3.828.733 4.653a.122.122 0 0 0 .05.064.212.212 0 0 0 .117.033h1.31c.085 0 .18-.042.258-.152a.45.45 0 0 0 .075-.366A16.743 16.743 0 0 1 6 9.75a.75.75 0 0 1 1.5 0c0 1.588.25 2.926.494 3.85.293 1.113-.504 2.4-1.783 2.4H4.9c-.686 0-1.35-.41-1.589-1.12A16.4 16.4 0 0 1 2.5 9.75.75.75 0 0 1 3.25 9z"
+                    />
+                    <path
+                      d="M0 6a4 4 0 0 1 4-4h2.75a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75H4a4 4 0 0 1-4-4zm4-2.5a2.5 2.5 0 1 0 0 5h2v-5z"
+                    />
+                    <path
+                      d="M15.59.082A.75.75 0 0 1 16 .75v10.5a.75.75 0 0 1-1.189.608l-.002-.001h.001l-.014-.01a5.775 5.775 0 0 0-.422-.25 10.63 10.63 0 0 0-1.469-.64C11.576 10.484 9.536 10 6.75 10a.75.75 0 0 1 0-1.5c2.964 0 5.174.516 6.658 1.043.423.151.787.302 1.092.443V2.014c-.305.14-.669.292-1.092.443C11.924 2.984 9.713 3.5 6.75 3.5a.75.75 0 0 1 0-1.5c2.786 0 4.826-.484 6.155-.957.665-.236 1.154-.47 1.47-.64.144-.077.284-.161.421-.25l.014-.01a.75.75 0 0 1 .78-.061z"
+                    />
+                  </svg>
+                </button>
+                <audio id="pronunciationAudio">
+                  <source
+                    src="data/audio/veilicks_pronounce.mp3"
+                    type="audio/mpeg"
+                  />
+                  Your browser does not support the audio element.
+                </audio>
+              </span>
+            </span>
+          </h3>
+          <h3 class="subtitle">
+            <span class="norm-weight subtitle-a selectable">
+              "With our thoughts, we make the world"
+              <br />
+              - Buddha
+            </span>
+          </h3>
         </div>
-        <!-- END AUDIO SECTION -->
-        <main id="root-main">
-            <!--START NAV-->
-                <div id="navbar"></div>
-            <!--END NAV-->
-            <!-- START SIDEBAR OVERLAY -->
-                <div id="overlay"></div>
-            <!-- END SIDEBAR OVERLAY -->
-            <!-- START TOP VIGNETTE -->
-                <div id="top-vignette"></div>
-            <!-- END TOP VIGNETTE -->
-            <!--START WELCOME SECTION-->
-            <section id="welcome-section">
-                <div id="welcome-text">
-                    <h1 class="title"><span class="norm-weight title-a"></span> <span id="v3i1ix">Drake Hay</span></h1>
-                    <h3 class="subtitle">
-                        <span class="norm-weight subtitle-b selectable">
-                            aka v3i1ix
-                            <span class="subtitle-c">
-                                /veɪlɪks/
-                                <button class="no-format" onclick="playAudio()">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="green" data-view-component="true"><path d="M3.25 9a.75.75 0 0 1 .75.75c0 2.142.456 3.828.733 4.653a.122.122 0 0 0 .05.064.212.212 0 0 0 .117.033h1.31c.085 0 .18-.042.258-.152a.45.45 0 0 0 .075-.366A16.743 16.743 0 0 1 6 9.75a.75.75 0 0 1 1.5 0c0 1.588.25 2.926.494 3.85.293 1.113-.504 2.4-1.783 2.4H4.9c-.686 0-1.35-.41-1.589-1.12A16.4 16.4 0 0 1 2.5 9.75.75.75 0 0 1 3.25 9z"/><path d="M0 6a4 4 0 0 1 4-4h2.75a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-.75.75H4a4 4 0 0 1-4-4zm4-2.5a2.5 2.5 0 1 0 0 5h2v-5z"/><path d="M15.59.082A.75.75 0 0 1 16 .75v10.5a.75.75 0 0 1-1.189.608l-.002-.001h.001l-.014-.01a5.775 5.775 0 0 0-.422-.25 10.63 10.63 0 0 0-1.469-.64C11.576 10.484 9.536 10 6.75 10a.75.75 0 0 1 0-1.5c2.964 0 5.174.516 6.658 1.043.423.151.787.302 1.092.443V2.014c-.305.14-.669.292-1.092.443C11.924 2.984 9.713 3.5 6.75 3.5a.75.75 0 0 1 0-1.5c2.786 0 4.826-.484 6.155-.957.665-.236 1.154-.47 1.47-.64.144-.077.284-.161.421-.25l.014-.01a.75.75 0 0 1 .78-.061z"/></svg>
-                                </button>
-                                <audio id="pronunciationAudio">
-                                    <source src="data/audio/veilicks_pronounce.mp3" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                            </span>
-                        </span>
-                    </h3>
-                    <h3 class="subtitle">
-                        <span class="norm-weight subtitle-a selectable">
-                            "With our thoughts, we make the world"
-                            <br>
-                            - Buddha
-                        </span>
-                    </h3>
-                </div>                
-            </section>
-            <!--END WELCOME SECTION-->
-            <!--START ABOUT SECTION-->
-            <div id="about-container" class="container-padding">
-                <div class="container">
-                    <section id="about">
-                        <h1>About</h1>
-                        <div class="heading-hr"></div>
-                        <div id="about-div">
-                            <div id="about-text" class="selectable">
-                                <p>
-                                    v3i1ix (Drake Hay) is a critic of oppressive systems, particularly the LDS Church, which he was born into. His Patreon supports those questioning religious indoctrination. Born to a Mormon family, his childhood was shattered at age two when his father witnessed his mother’s sexual assault in church. She later vilified his father, divorced him, and remarried, perpetuating lies about his character. Drake condemns societal hypocrisy that scapegoats men until they’re driven to suicide—a fate he narrowly escaped.
-                                </p>
-                                <p>
-                                    Rejecting complacency, he challenges institutions that prioritize control and profit (e.g., the LDS Church’s tithing system) over humanity. His DMT experiences inspired his alias, v3i1ix, reflecting peeled-back "veils" of illusion. He condemns child abuse, societal apathy, and the comfort-driven ignorance of suffering, quoting Terence McKenna: “<span class="italic">Control is what they’re after.</span>” Unfiltered and defiant, Drake advocates raw truth over dogma, refusing to sanitize reality.
-                                </p>
-                            </div>
-                            <div id="about-img">
-                                <a href="data/images/2025_ProfilePicture_Square.png" target="_blank">
-                                    <img src="data/images/2025_ProfilePicture_Square.png" alt="Drake Hay Pic" id="profile-pic">
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+      </section>
+      <!--END WELCOME SECTION-->
+      <!--START ABOUT SECTION-->
+      <div id="about-container" class="container-padding">
+        <div class="container">
+          <section id="about">
+            <h1>About</h1>
+            <div class="heading-hr"></div>
+            <div id="about-div">
+              <div id="about-text" class="selectable">
+                <p>
+                  v3i1ix (Drake Hay) is a critic of oppressive systems,
+                  particularly the LDS Church, which he was born into. His
+                  Patreon supports those questioning religious indoctrination.
+                  Born to a Mormon family, his childhood was shattered at age
+                  two when his father witnessed his mother’s sexual assault in
+                  church. She later vilified his father, divorced him, and
+                  remarried, perpetuating lies about his character. Drake
+                  condemns societal hypocrisy that scapegoats men until they’re
+                  driven to suicide—a fate he narrowly escaped.
+                </p>
+                <p>
+                  Rejecting complacency, he challenges institutions that
+                  prioritize control and profit (e.g., the LDS Church’s tithing
+                  system) over humanity. His DMT experiences inspired his alias,
+                  v3i1ix, reflecting peeled-back "veils" of illusion. He
+                  condemns child abuse, societal apathy, and the comfort-driven
+                  ignorance of suffering, quoting Terence McKenna: “<span
+                    class="italic"
+                    >Control is what they’re after.</span
+                  >” Unfiltered and defiant, Drake advocates raw truth over
+                  dogma, refusing to sanitize reality.
+                </p>
+                <div class="heading-hr"></div>
+                <p>
+                  In more casual terms, I've never been a fan of the idea of
+                  'authority', especially after psychedelic use, you go so deep
+                  into your mind that it's just exposed as the joke that it is.
+                  For years I have been content with being 'polite' at my own
+                  expense, but at some point you have to say enough is enough,
+                  because it seems that people will do all sorts of evil to you,
+                  through you, on you, behind you, without a second glance... if
+                  you let them.
+                </p>
+                <p>
+                  So really at the end of the day it's about throwing my mask in
+                  the trash can and saying, "look motherfucker, I'm not here to
+                  be polite, nor to coddle anyone. If you don't like me, Merry
+                  Christmas, I'm happy for you. My goal is to put in work and
+                  make real change. To stop talking about it and start being
+                  about it. That's it. I have nothing to be sorry for. We are
+                  all criminals, and we're all divine. It's weird, sure, but it
+                  is what it is, man. Let's shut up and get to work."
+                </p>
+              </div>
+              <div id="about-img">
+                <a
+                  href="data/images/2025_ProfilePicture_Square.png"
+                  target="_blank"
+                >
+                  <img
+                    src="data/images/2025_ProfilePicture_Square.png"
+                    alt="Drake Hay Pic"
+                    id="profile-pic"
+                  />
+                </a>
+              </div>
             </div>
-            <!--END ABOUT SECTION-->
-            <!--START PROJECTS SECTION-->
-            <div id="projects-container" class="container-padding">
-                <div class="container">
-                    <section id="projects">
-                        <h1>Projects</h1>
-                        <div class="heading-hr"></div>
-                        <fieldset id="music">
-                            <legend>
-                                Music<br>
-                                <span class="fieldset-subtitle">
-                                    Production Composition Engineering
-                                </span>
-                            </legend>
-                            <fieldset id="music-2025" class="grid inner-fieldset">
-                                <legend>
-                                    2025 <br>
-                                    <span class="fieldset-subtitle">
-                                        11th Year
-                                    </span>
-                                </legend>
-                                <div class="project-tile">
-                                    <a href="projects/Music/2025/Limiter Stacking/index.html">
-                                        <img src="projects/Music/2025/Limiter Stacking/WCcqoo6U9T.png" alt="Limiter Stacking">
-                                        <span class="tile-heading">Limiter Stacking</span>
-                                    </a>
-                                </div>
-                            </fieldset>
-                        </fieldset>
-                        <fieldset id="js" class="grid">
-                            <legend>
-                                JavaScript Algorithms and Data Structures<br>
-                                <span class="fieldset-subtitle">Developer Certification</span>
-                            </legend>
-                            
-                            <div class="project-tile">
-                                <a href="projects/JavaScript AaDS/pokemon-search/pokemon-search.html">
-                                    <img src="projects/JavaScript AaDS/pokemon-search/pokemonSearch.gif" alt="Pokémon Search Project">
-                                    <span class="tile-heading">Pokémon Search</span>
-                                </a>
-                            </div>
-    
-                            <div class="project-tile">
-                                <a href="projects/JavaScript AaDS/cash-register/cash-register.html">
-                                    <img src="projects/JavaScript AaDS/cash-register/cashRegister.gif" alt="Cash Register Project">
-                                    <span class="tile-heading">Cash Register</span>
-                                </a>
-                            </div>
-    
-                            <div class="project-tile">
-                                <a href="projects/JavaScript AaDS/us-phone-number-validator/us-phone-number-validator.html">
-                                    <img src="projects/JavaScript AaDS/us-phone-number-validator/phoneNumberValidation.gif" alt="Phone Number Validator Project">
-                                    <span class="tile-heading">US Phone Number Validator</span>
-                                </a>
-                            </div>
-    
-                            <div class="project-tile">
-                                <a href="projects/JavaScript AaDS/roman-numeral-converter/roman-numeral-converter.html">
-                                    <img src="projects/JavaScript AaDS/roman-numeral-converter/romanNumeralConverter.gif" alt="Roman Numeral Converter Project">
-                                    <span class="tile-heading">Roman Numeral Converter</span>
-                                </a>
-                            </div>
-    
-                            <div class="project-tile">
-                                <a href="projects/JavaScript AaDS/palindrome-checker/palindrome-checker.html">
-                                    <img src="projects/JavaScript AaDS/palindrome-checker/palindromeChecker.gif" alt="Palindrome Checker Project">
-                                    <span class="tile-heading">Palindrome Checker</span>
-                                </a>
-                            </div>
-    
-                            <div class="project-tile">
-                                <a href="projects/JavaScript AaDS/calorie-counter/calorie-counter.html">
-                                    <img src="data/images/beforePalindrome/calorieCounter.png" alt="Calorie Counter Project">
-                                    <span class="tile-heading">Calorie Counter</span>
-                                </a>
-                            </div>
-    
-                        </fieldset>
-                        <fieldset id="rwd" class="grid">
-                            <legend>
-                                Responsive Web Design<br>
-                                <span class="fieldset-subtitle">Developer Certification</span>
-                            </legend>
-                            <div class="project-tile">
-                                <a href="projects/RWD/personal-portfolio/personal-portfolio.html">
-                                    <img src="projects/RWD/personal-portfolio/portfolioPage.gif" alt="Personal Portfolio Project">
-                                    <span class="tile-heading">Personal Portfolio</span>
-                                </a>
-                            </div>
-                            <div class="project-tile">
-                                <a href="projects/RWD/product-landing-page/product-landing-page.html">
-                                    <img src="projects/RWD/product-landing-page/productLandPage.gif" alt="Product Landing Page Project">
-                                    <span class="tile-heading">Product Landing Page</span>
-                                </a>
-                            </div>
-                            <div class="project-tile">
-                                <a href="projects/RWD/technical-documentation-page/technical-documentation-page.html">
-                                    <img src="projects/RWD/technical-documentation-page/techDoc.gif" alt="Technical Documentation Project">
-                                    <span class="tile-heading">Technical Documentation Page</span>
-                                </a>
-                            </div>
-                            <div class="project-tile">
-                                <a href="projects/RWD/tribute-page/tribute-page.html">
-                                    <img src="projects/RWD/tribute-page/tributePage.gif" alt="Tribute Page Project">
-                                    <span class="tile-heading">Tribute Page</span>
-                                </a>
-                            </div>
-                            <div class="project-tile">
-                                <a href="projects/RWD/survey-form/survey-form.html">
-                                    <img src="projects/RWD/survey-form/surveyForm.gif" alt="Survey Form Project">
-                                    <span class="tile-heading">Survey Form</span>
-                                </a>
-                            </div>
-                        </fieldset>
-                    </section>
-                    <!--END PROJECTS SECTION-->
-                    
+          </section>
+        </div>
+      </div>
+      <!--END ABOUT SECTION-->
+      <!--START PROJECTS SECTION-->
+      <div id="projects-container" class="container-padding">
+        <div class="container">
+          <section id="projects">
+            <h1>Projects</h1>
+            <div class="heading-hr"></div>
+            <fieldset id="music">
+              <legend>
+                Music<br />
+                <span class="fieldset-subtitle">
+                  Production Composition Engineering
+                </span>
+              </legend>
+              <fieldset id="music-2025" class="grid inner-fieldset">
+                <legend>
+                  2025 <br />
+                  <span class="fieldset-subtitle"> 11th Year </span>
+                </legend>
+                <div class="project-tile">
+                  <a href="projects/Music/2025/Limiter Stacking/index.html">
+                    <img
+                      src="projects/Music/2025/Limiter Stacking/WCcqoo6U9T.png"
+                      alt="Limiter Stacking"
+                    />
+                    <span class="tile-heading">Limiter Stacking</span>
+                  </a>
                 </div>
+              </fieldset>
+            </fieldset>
+            <fieldset id="js" class="grid">
+              <legend>
+                JavaScript Algorithms and Data Structures<br />
+                <span class="fieldset-subtitle">Developer Certification</span>
+              </legend>
+
+              <div class="project-tile">
+                <a
+                  href="projects/JavaScript AaDS/pokemon-search/pokemon-search.html"
+                >
+                  <img
+                    src="projects/JavaScript AaDS/pokemon-search/pokemonSearch.gif"
+                    alt="Pokémon Search Project"
+                  />
+                  <span class="tile-heading">Pokémon Search</span>
+                </a>
+              </div>
+
+              <div class="project-tile">
+                <a
+                  href="projects/JavaScript AaDS/cash-register/cash-register.html"
+                >
+                  <img
+                    src="projects/JavaScript AaDS/cash-register/cashRegister.gif"
+                    alt="Cash Register Project"
+                  />
+                  <span class="tile-heading">Cash Register</span>
+                </a>
+              </div>
+
+              <div class="project-tile">
+                <a
+                  href="projects/JavaScript AaDS/us-phone-number-validator/us-phone-number-validator.html"
+                >
+                  <img
+                    src="projects/JavaScript AaDS/us-phone-number-validator/phoneNumberValidation.gif"
+                    alt="Phone Number Validator Project"
+                  />
+                  <span class="tile-heading">US Phone Number Validator</span>
+                </a>
+              </div>
+
+              <div class="project-tile">
+                <a
+                  href="projects/JavaScript AaDS/roman-numeral-converter/roman-numeral-converter.html"
+                >
+                  <img
+                    src="projects/JavaScript AaDS/roman-numeral-converter/romanNumeralConverter.gif"
+                    alt="Roman Numeral Converter Project"
+                  />
+                  <span class="tile-heading">Roman Numeral Converter</span>
+                </a>
+              </div>
+
+              <div class="project-tile">
+                <a
+                  href="projects/JavaScript AaDS/palindrome-checker/palindrome-checker.html"
+                >
+                  <img
+                    src="projects/JavaScript AaDS/palindrome-checker/palindromeChecker.gif"
+                    alt="Palindrome Checker Project"
+                  />
+                  <span class="tile-heading">Palindrome Checker</span>
+                </a>
+              </div>
+
+              <div class="project-tile">
+                <a
+                  href="projects/JavaScript AaDS/calorie-counter/calorie-counter.html"
+                >
+                  <img
+                    src="data/images/beforePalindrome/calorieCounter.png"
+                    alt="Calorie Counter Project"
+                  />
+                  <span class="tile-heading">Calorie Counter</span>
+                </a>
+              </div>
+            </fieldset>
+            <fieldset id="rwd" class="grid">
+              <legend>
+                Responsive Web Design<br />
+                <span class="fieldset-subtitle">Developer Certification</span>
+              </legend>
+              <div class="project-tile">
+                <a
+                  href="projects/RWD/personal-portfolio/personal-portfolio.html"
+                >
+                  <img
+                    src="projects/RWD/personal-portfolio/portfolioPage.gif"
+                    alt="Personal Portfolio Project"
+                  />
+                  <span class="tile-heading">Personal Portfolio</span>
+                </a>
+              </div>
+              <div class="project-tile">
+                <a
+                  href="projects/RWD/product-landing-page/product-landing-page.html"
+                >
+                  <img
+                    src="projects/RWD/product-landing-page/productLandPage.gif"
+                    alt="Product Landing Page Project"
+                  />
+                  <span class="tile-heading">Product Landing Page</span>
+                </a>
+              </div>
+              <div class="project-tile">
+                <a
+                  href="projects/RWD/technical-documentation-page/technical-documentation-page.html"
+                >
+                  <img
+                    src="projects/RWD/technical-documentation-page/techDoc.gif"
+                    alt="Technical Documentation Project"
+                  />
+                  <span class="tile-heading">Technical Documentation Page</span>
+                </a>
+              </div>
+              <div class="project-tile">
+                <a href="projects/RWD/tribute-page/tribute-page.html">
+                  <img
+                    src="projects/RWD/tribute-page/tributePage.gif"
+                    alt="Tribute Page Project"
+                  />
+                  <span class="tile-heading">Tribute Page</span>
+                </a>
+              </div>
+              <div class="project-tile">
+                <a href="projects/RWD/survey-form/survey-form.html">
+                  <img
+                    src="projects/RWD/survey-form/surveyForm.gif"
+                    alt="Survey Form Project"
+                  />
+                  <span class="tile-heading">Survey Form</span>
+                </a>
+              </div>
+            </fieldset>
+          </section>
+          <!--END PROJECTS SECTION-->
+        </div>
+      </div>
+      <!-- START CONTACT SECTION -->
+      <div id="contact-container" class="container-padding">
+        <div class="container">
+          <section id="contact">
+            <h1>Contact</h1>
+            <div class="heading-hr"></div>
+            <div id="contact-div">
+              <fieldset class="contact-fieldset">
+                <legend>Direct</legend>
+                <form
+                  id="contact-form"
+                  action="https://formsubmit.co/v3i1ix@proton.me"
+                  method="POST"
+                >
+                  <div class="form-element">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-element">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div class="form-element">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                  </div>
+                  <button type="submit" id="contact-send">Send</button>
+                </form>
+              </fieldset>
+              <fieldset class="contact-fieldset">
+                <legend>Indirect</legend>
+                <div id="profile-links">
+                  <a
+                    class="profile-link"
+                    href="https://www.linkedin.com/in/drakehay"
+                    target="_blank"
+                  >
+                    <img
+                      class="contact-img"
+                      src="data/images/logos/LI-Logo_v2.png"
+                      width="100%"
+                      alt="LinkedIn Profile"
+                    />
+                  </a>
+                  <a
+                    href="https://github.com/disbelief2389"
+                    class="profile-link"
+                    target="_blank"
+                  >
+                    <img
+                      class="contact-img"
+                      src="data/images/logos/GitHub_Logo_v2.png"
+                      width="100%"
+                      alt="LinkedIn Profile"
+                    />
+                  </a>
+                </div>
+                <div id="custom-hr-2"></div>
+                <div id="contact-info">
+                  <p>
+                    Phone:
+                    <span class="contact-detail selectable"
+                      >+61 435 263 600</span
+                    >
+                  </p>
+                  <p>
+                    Email:
+                    <span class="contact-detail selectable"
+                      >v3i1ix@proton.me</span
+                    >
+                  </p>
+                </div>
+              </fieldset>
             </div>
-            <!-- START CONTACT SECTION -->
-            <div id="contact-container" class="container-padding">
-                <div class="container">
-                    <section id="contact">
-                        <h1>Contact</h1>
-                        <div class="heading-hr"></div>
-                        <div id="contact-div">
-                            <fieldset class="contact-fieldset">
-                                <legend>Direct</legend>
-                                <form id="contact-form" action="https://formsubmit.co/v3i1ix@proton.me" method="POST">
-                                    <div class="form-element">
-                                        <label for="name">Name</label>
-                                        <input type="text" id="name" name="name" required>
-                                    </div>
-                                    <div class="form-element">
-                                        <label for="email">Email</label>
-                                        <input type="email" id="email" name="email" required>
-                                    </div>
-                                    <div class="form-element">
-                                        <label for="message">Message</label>
-                                        <textarea id="message" name="message" required></textarea>
-                                    </div>
-                                    <button type="submit" id="contact-send">Send</button>
-                                </form>
-                            </fieldset>
-                            <fieldset class="contact-fieldset">
-                                <legend>Indirect</legend>
-                                <div id="profile-links">
-                                    <a class="profile-link" href="https://www.linkedin.com/in/drakehay" target="_blank">
-                                        <img class="contact-img" src="data/images/logos/LI-Logo_v2.png" width="100rem" alt="LinkedIn Profile">
-                                    </a>
-                                    <a href="https://github.com/disbelief2389" class="profile-link" target="_blank">
-                                        <img class="contact-img" src="data/images/logos/GitHub_Logo_v2.png" width="85rem" alt="GitHub Profile">
-                                    </a>
-                                </div>
-                                <div id="custom-hr-2"></div>
-                                <div id="contact-info">
-                                    <p>Phone: <span class="contact-detail selectable">+61 435 263 600</span></p>
-                                    <p>Email: <span class="contact-detail selectable">v3i1ix@proton.me</span></p>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <!-- <section id="contact" class="contact-section">
+            <!-- <section id="contact" class="contact-section">
                             <div class="contact-links">
                                 <a id="profile-link" href="https://github.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </section> -->
-                    </section>
-                </div>
-            </div>
-            <!-- END CONTACT SECTION -->
-            <!--START FOOTER SECTION-->
-            <div id="footer"></div>
-            <!--END FOOTER SECTION-->
-        </main>
-        <div id="copy-feedback" aria-live="polite"></div>
-        <script>
-            function playAudio() {
-                var audio = document.getElementById("pronunciationAudio");
-                audio.currentTime = 0;
-                audio.play();
-            }
-        </script>
-        <script src="load-common.js"></script>
-        <script src="data/data.js"></script>
-        <script src="script.js" defer></script>
-    </body>
+          </section>
+        </div>
+      </div>
+      <!-- END CONTACT SECTION -->
+      <!--START FOOTER SECTION-->
+      <div id="footer"></div>
+      <!--END FOOTER SECTION-->
+    </main>
+    <div id="copy-feedback" aria-live="polite"></div>
+    <script>
+      function playAudio() {
+        var audio = document.getElementById("pronunciationAudio");
+        audio.currentTime = 0;
+        audio.play();
+      }
+    </script>
+    <script src="load-common.js"></script>
+    <script src="data/data.js"></script>
+    <script src="script.js" defer></script>
+  </body>
 </html>
