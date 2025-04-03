@@ -542,7 +542,7 @@ a.smooth-scroll {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 1.7rem;
+  padding-left: 1.54rem;
   height: 3.6rem;
 }
 
@@ -800,10 +800,19 @@ button:active:not(button.no-format) {
   color: black;
 }
 
-*:focus {
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
   box-shadow: none;
   outline: 0.2px solid #00ff00; /* Example custom outline */
   outline-offset: 2px; /* Optional spacing */
+}
+
+a:focus {
+  box-shadow: none;
+  outline: none;
+  outline-offset: none;
 }
 
 .form-element {
