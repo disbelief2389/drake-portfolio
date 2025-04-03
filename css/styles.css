@@ -537,6 +537,15 @@ div.chevron-buttons {
   }
 }
 
+a.smooth-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 1.54rem;
+  height: 3.6rem;
+}
+
 div.projects-container {
   display: flex;
   gap: 0rem; /* Adds space between cards */
@@ -791,9 +800,7 @@ button:active:not(button.no-format) {
   color: black;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+*:focus {
   box-shadow: none;
   outline: 0.2px solid #00ff00; /* Example custom outline */
   outline-offset: 2px; /* Optional spacing */
