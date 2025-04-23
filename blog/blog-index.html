@@ -1,132 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script>
-      (function () {
-        // const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        const base = document.createElement("base");
-        // base.href = isLocal ? '/' : '/mcfarmarchive/';
-        // could potentially just do base.href = ‘/’;
-        base.href = "/";
-        document.head.appendChild(base);
-      })();
-    </script>
+	<head>
+		<script>
+			(function () {
+				// const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+				const base = document.createElement("base");
+				// base.href = isLocal ? '/' : '/mcfarmarchive/';
+				// could potentially just do base.href = ‘/’;
+				base.href = "/";
+				document.head.appendChild(base);
+			})();
+		</script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drake's Blog</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="icon"
-      href="data/images/logos/v3i1ix logo_transparentBackground.ico"
-    />
-  </head>
-  <body>
-    <main class="blog-main">
-      <!--START NAV-->
-      <div id="navbar"></div>
-      <!--END NAV-->
-      <!-- START BLOG POSTCARDS -->
-      <div id="blog-posts-container" class="container-padding">
-        <div class="container">
-          <section id="blog-posts">
-            <h1>Blog</h1>
-            <div class="heading-hr"></div>
-            <fieldset id="blog-posts-fieldset" class="grid">
-              <legend>
-                Posts<br />
-                <span class="fieldset-subtitle">2025</span>
-              </legend>
-              <div class="chevron-buttons">
-                <button class="prev-btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="green"
-                  >
-                    <path
-                      d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"
-                    />
-                  </svg>
-                </button>
-                <button class="next-btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="green"
-                  >
-                    <path
-                      d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="projects-container">
-                <div class="project-tile">
-                  <a href="/blog/posts/post0005/post0005.html">
-                    <img
-                      src="/blog/posts/post0005/MeCar.jpg"
-                      alt="Home Stretch Image"
-                    />
-                    <span class="tile-heading">Home Stretch</span>
-                  </a>
-                </div>
-                <div class="project-tile">
-                  <a href="/blog/posts/post0004/post0004.html">
-                    <img
-                      src="/blog/posts/post0004/soffice.bin_9UlfGFpyzJ.png"
-                      alt="Drake's Reflections"
-                    />
-                    <span class="tile-heading">Drake's Reflections</span>
-                  </a>
-                </div>
-                <div class="project-tile">
-                  <a href="blog/posts/post0003/post0003.html">
-                    <img
-                      src="blog/posts/post0003/firefox_kkunRqZW9e.png"
-                      alt="Competition Remix Completion"
-                    />
-                    <span class="tile-heading"
-                      >Competition Remix Completion</span
-                    >
-                  </a>
-                </div>
-                <div class="project-tile">
-                  <a href="blog/posts/post0002/post0002.html">
-                    <img
-                      src="blog/posts/post0002/firefox_MWeb9fLIXv.png"
-                      alt="A Conversation With AI"
-                    />
-                    <span class="tile-heading">A Conversation With AI</span>
-                  </a>
-                </div>
-                <div class="project-tile">
-                  <a href="blog/posts/post0001/post0001.html">
-                    <img
-                      src="blog/posts/post0001/firefox_R4dwN69lAl.gif"
-                      alt="v3i1ix Patreon is Born"
-                    />
-                    <span class="tile-heading">v3i1ix Patreon is Born</span>
-                  </a>
-                </div>
-              </div>
-            </fieldset>
-          </section>
-          <!--END PROJECTS SECTION-->
-        </div>
-      </div>
-      <!-- END BLOG POSTCARDS -->
-      <!--START FOOTER-->
-      <div id="footer"></div>
-      <!--END FOOTER-->
-    </main>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Drake's Blog</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link
+			rel="icon"
+			href="data/images/logos/v3i1ix logo_transparentBackground.ico"
+		/>
+	</head>
+	<body>
+		<main class="blog-main">
+			<!--START NAV-->
+			<div id="navbar"></div>
+			<!--END NAV-->
+			<!-- START BLOG POSTCARDS -->
+			<div id="blog-posts-container" class="container-padding">
+				<div class="container">
+					<section id="blog-posts">
+						<h1>Blog</h1>
+						<div class="heading-hr"></div>
+						<fieldset id="blog-posts-fieldset" class="grid">
+							<legend>
+								Posts<br />
+								<span class="fieldset-subtitle">2025</span>
+							</legend>
+							<div class="chevron-buttons">
+								<button class="prev-btn">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										height="24px"
+										viewBox="0 -960 960 960"
+										width="24px"
+										fill="green"
+									>
+										<path
+											d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"
+										/>
+									</svg>
+								</button>
+								<button class="next-btn">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										height="24px"
+										viewBox="0 -960 960 960"
+										width="24px"
+										fill="green"
+									>
+										<path
+											d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="projects-container">
+								<div class="project-tile">
+									<a
+										href="/blog/posts/post0006/post0006.html"
+									>
+										<img
+											src="/blog/posts/post0006/firefox_5qF5WHm9zF.png"
+											alt="The Event Horizon Image"
+										/>
+										<span class="tile-heading"
+											>The Event Horizon</span
+										>
+									</a>
+								</div>
+								<div class="project-tile">
+									<a
+										href="/blog/posts/post0005/post0005.html"
+									>
+										<img
+											src="/blog/posts/post0005/MeCar.jpg"
+											alt="Home Stretch Image"
+										/>
+										<span class="tile-heading"
+											>Home Stretch</span
+										>
+									</a>
+								</div>
+								<div class="project-tile">
+									<a
+										href="/blog/posts/post0004/post0004.html"
+									>
+										<img
+											src="/blog/posts/post0004/soffice.bin_9UlfGFpyzJ.png"
+											alt="Drake's Reflections"
+										/>
+										<span class="tile-heading"
+											>Drake's Reflections</span
+										>
+									</a>
+								</div>
+								<div class="project-tile">
+									<a href="blog/posts/post0003/post0003.html">
+										<img
+											src="blog/posts/post0003/firefox_kkunRqZW9e.png"
+											alt="Competition Remix Completion"
+										/>
+										<span class="tile-heading"
+											>Competition Remix Completion</span
+										>
+									</a>
+								</div>
+								<div class="project-tile">
+									<a href="blog/posts/post0002/post0002.html">
+										<img
+											src="blog/posts/post0002/firefox_MWeb9fLIXv.png"
+											alt="A Conversation With AI"
+										/>
+										<span class="tile-heading"
+											>A Conversation With AI</span
+										>
+									</a>
+								</div>
+								<div class="project-tile">
+									<a href="blog/posts/post0001/post0001.html">
+										<img
+											src="blog/posts/post0001/firefox_R4dwN69lAl.gif"
+											alt="v3i1ix Patreon is Born"
+										/>
+										<span class="tile-heading"
+											>v3i1ix Patreon is Born</span
+										>
+									</a>
+								</div>
+							</div>
+						</fieldset>
+					</section>
+					<!--END PROJECTS SECTION-->
+				</div>
+			</div>
+			<!-- END BLOG POSTCARDS -->
+			<!--START FOOTER-->
+			<div id="footer"></div>
+			<!--END FOOTER-->
+		</main>
 
-    <script src="load-common.js"></script>
-    <script src="data/data.js"></script>
-    <script src="script.js"></script>
-  </body>
+		<script src="load-common.js"></script>
+		<script src="data/data.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
