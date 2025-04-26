@@ -52,7 +52,7 @@ p {
 }
 
 html {
-	color: #00ff00;
+	color: #00a000;
 	box-sizing: border-box;
 
 	/* Set font size for easy rem calculations
@@ -190,6 +190,15 @@ h6 {
 h1 {
 	font-size: 3rem;
 	text-align: center;
+}
+
+h1.left-align {
+	text-align: left;
+}
+
+h1.project-h1 {
+	width: 80%;
+	margin: 2rem auto;
 }
 
 h2,
@@ -469,7 +478,7 @@ fieldset {
 	color: green;
 	border-radius: 15px;
 	border-color: #00ff000d;
-	margin: 2rem 6rem;
+	margin: 2rem;
 	transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 

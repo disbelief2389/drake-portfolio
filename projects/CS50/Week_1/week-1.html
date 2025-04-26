@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script>
+			(function () {
+				// const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+				const base = document.createElement("base");
+				// base.href = isLocal ? '/' : '/mcfarmarchive/';
+				// could potentially just do base.href = ‘/’;
+				base.href = "/";
+				document.head.appendChild(base);
+			})();
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/project-page.css" />
+		<link
+			rel="icon"
+			href="data/images/logos/v3i1ix logo_transparentBackground.ico"
+		/>
+		<title>Week 1 - C</title>
+	</head>
+	<body>
+		<!--START NAV-->
+		<div id="navbar"></div>
+		<!--END NAV-->
+		<div class="container-padding">
+			<div class="container">
+				<h1>Week 1 - C</h1>
+				<div class="heading-hr"></div>
+				<div class="project-intro">
+					<p>
+						So I recently saw online people recommending Harvard's
+						CS50 free computer science course. I usually just don't
+						bother with established institutions like Harvard, but
+						I've made an exception for Harvard now as this course is
+						the best computer science course I have taken to date.
+						Lower level languages, they break things down into
+						common English, whilst still keeping things interesting.
+						To be honest I actually contribute its success largely
+						not to the reputation of Harvard believe it or not, but
+						more to the format in which the main lectures are
+						delivered. Because they are delivered live, there is
+						more pressure I feel on the professor to actually
+						research and understand the material rather than virtue
+						signal knowledge and replace insight with slop.
+						<br /><br />
+						The first 'week' is in C; I'm trying not to judge too
+						soon, but I enjoy C and my initial emotion when I
+						noticed that not every week would be C was sadness. I am
+						grateful nonetheless. I'm particularly excited to apply
+						this new knowledge to other projects that I've been
+						struggling to program, particularly this hybrid timer
+						for android, that basically starts off as a stopwatch
+						and reminds you every 30 minutes that such time has
+						passed, and then when you want to take a break, you tap
+						the screen and the time counts back down from whatever
+						the state of the stopwatch was when you hit 'take
+						break'. This seems like a fairly simple concept but
+						apparently not, as I was not able to work AI into making
+						it for me due to my lack of knowledge generally when it
+						comes to lower-level programming languages or anything
+						beyond basic frontend like HTML and CSS. Once you start
+						talking about C, C#, Java, Kotlin, even Python,
+						JavaScript... that's where I have struggled the most;
+						the behind the scenes programmatic logic and fundamental
+						computer science.
+						<br /><br />
+						I also attribute a lot of this course's value in its use
+						of AI. It has its own available to you at all times that
+						is programmed specifically not to give you code or
+						answers, though it has once given me a sample of code
+						which was out of character... but this has really helped
+						me to get help whilst still actually working out the
+						problem on my own and not progressively delegating more
+						and more of the programming to the AI, and subsequently
+						understanding less and less about it.
+						<br /><br />
+						No, what I found was that my understanding of C
+						increased alongside the development of the program, it
+						was a 1:1 movement, because I was in fact writing it
+						myself and not just saying, hey, let me copy and paste
+						your code. Again, I would still go to it and paste my
+						code for reference but its rigidity in never explicitly
+						writing the program for you seems to make it somewhat
+						more helpful...
+						<br /><br />
+						Anyway. We started off small with a simple hello world
+						program as you do, this was simple enough. Learning
+						about basic main functions, packages that need be
+						included for otherwise pretty standard default functions
+						included in other programming languages. Nonetheless it
+						was cool to see.
+					</p>
+					<h1 class="left-align project-h1">hello.c</h1>
+					<pre>
+                        <code>
+                            // necessary for string and get_string, etc.
+                            #include &lt;cs50.h&gt;
+                            // necessary for printf
+                            #include &lt;stdio.h&gt;
+
+                            int main(void)
+                            {
+                                // Get name from user and store in variable of type string
+                                string name = get_string("What's your name? ");
+
+                                // Print returned string value stored in name
+                                printf("hello, %s\n", name);
+                            }
+                        </code>
+                    </pre>
+					<p>
+						Next was a Mario pyramid project with the seemingly
+						<span class="italic">'simple'</span> task of making
+						hashes appear on the screen in a particular order. Once
+						I started to get a hang of the loops and using variables
+						dynamically, and began to understand their obscure
+						nature and potential use-cases, I was cruising. But at
+						first it was quite the headache especially pre-coffee.
+						<br /><br />
+						After I got it though it was cool. My first challenge
+						was getting simply a left facing pyramid (one where you
+						do not need to manually account for any space
+						characters). Afterward though we were prompted, if we
+						were comfortable, to write a program that prints a
+						couple of pyramids with a dynamic height perameter
+						defined by the user.
+						<br /><br />
+						This was substantially harder. I initially
+						overcomplicated things way too much, adding far too many
+						functions creating disconnection in scope and
+						modularity. I was spreading the code too thin basically,
+						overcomplicating things, instead of trying to figure out
+						the enhanced logic, just keeping it in the existing
+						functions I had already written
+						<br /><br />
+						I think I was intimidated and completely uncertain of
+						how I would even accomplish calculating each character
+						like I was able to in the end. Breaking things down into
+						very literal and critical components made the task a lot
+						less daunting. Working with the AI duck that they give
+						you helped a lot to break that down and say, ok, how
+						many spaces am I going to need, followed by what? What
+						are the patterns here?
+						<br /><br />
+						Asking that question over and over and over and over
+						again until I understood the patterns was all that was
+						really required. Overall, this project would end up
+						serving as a fundamental prerequisite to the coming
+						project, giving me the confidence to make as many loops
+						as I need to complete the task. Anyway here's the code:
+					</p>
+					<h1 class="left-align project-h1">mario.c</h1>
+					<pre>
+                        <code>
+                            #include &lt;cs50.h&gt;
+                            #include &lt;stdio.h&gt;
+                            
+                            // Resubmit due to latent change in function parameter declaration name
+                            void build_pyramids(int h);
+                            
+                            void print_row(int rowNum, int height);
+                            
+                            int main(void)
+                            {
+                                // Ask user for height & verify input
+                                int height;
+                                do
+                                {
+                                    height = get_int("How high should the pyramid be? ");
+                                } // Input must be an int between 1-8 inclusive
+                                while (height < 1 || height > 8);
+                            
+                                build_pyramids(height);
+                            }
+                            
+                            // Function responsible for the final assembly
+                            void build_pyramids(int h)
+                            {
+                                for (int i = 0; i < h; i++)
+                                {
+                                    print_row(i + 1, h);
+                                }
+                            }
+                            
+                            // Function responsible for the assembly of each row
+                            void print_row(int rowNum, int height)
+                            {
+                                // Space loop
+                                for (int i = height - rowNum; i > 0; i--)
+                                {
+                                    printf(" ");
+                                }
+                            
+                                // Left Hash loop
+                                for (int i = 0; i < rowNum; i++)
+                                {
+                                    printf("#");
+                                }
+                            
+                                // Space between left and right triangles
+                                printf("  ");
+                            
+                                // Right Hash loop
+                                for (int i = 0; i < rowNum; i++)
+                                {
+                                    printf("#");
+                                }
+                            
+                                // Line Break
+                                printf("\n");
+                            }
+                        </code>
+                    </pre>
+					<p>
+						So, the next project was the most fun I've had in a
+						while programming, and that's really cool to say. I've
+						always wanted to enjoy it. It took a while but once I
+						was in the flow I wasn't even thinking and things were
+						working... things became natural, I was tired as heck as
+						I think the coffee was wearing off but I was able to
+						somehow just work through the problems. It was such a
+						breakthrough compared to my days in Kotlin trying to no
+						avail to program this hybrid timer. Here I actually felt
+						like I was programming something and able to communicate
+						with the computer on an effective level. So, I have hope
+						for the future and will one day get that timer
+						programmed, because it is a great idea and will likely
+						help me a lot with weight-loss, etc.
+						<br /><br />
+						I really can't remember a lot of the programming from
+						this one, as, like I said, I was in the flow for a lot
+						of it and kind of just zoned out and it was done. I
+						actually achieved and passed all the tests pretty early
+						on, the pain points really came from trying to improve
+						the design of the code to make it more readable,
+						compact, less redundant, etc.
+						<br /><br />
+						There is a really cool tool they have called design50
+						which is basically getting AI to give feedback on the
+						programming and logic design as such. Simplifying
+						functions from diverse and obscure into compact and
+						succinct and easy to read and understand logic. It
+						wasn't easy and it took a while but I'm really happy
+						with the outcome! I was able to make a program that I
+						would usually be intimidated to even read, let alone
+						write... turns out, with a little time, effort, and
+						patience, you too can create your own credit card
+						validation tool in C!
+					</p>
+					<h1 class="left-align project-h1">credit.c</h1>
+					<pre>
+                        <code>
+                            #include &lt;cs50.h&gt;
+                            #include &lt;stdio.h&gt;
+                            
+                            string get_card_type(long n);
+                            int get_digit_sum(long n);
+                            int get_first_two_digits(long n);
+                            int get_length(long n);
+                            int get_luhn_sum(long n);
+                            bool validate_card(long n);
+                            
+                            // Credit Card Validator
+                            int main(void)
+                            {
+                                // Get card number
+                                long card_number;
+                                do
+                                {
+                                    card_number = get_long("What is your credit card number? ");
+                                }
+                                while (card_number < 1);
+                            
+                                // Print card type
+                                printf("%s\n", get_card_type(card_number));
+                            }
+                            
+                            string get_card_type(long n)
+                            {
+                                // Card detail variables initialisation
+                                bool is_valid = validate_card(n);
+                                int c_length = get_length(n);
+                                int starts_with = get_first_two_digits(n);
+                            
+                                // Digits;
+                                // AMEX:		15
+                                // MASTERCARD:	16
+                                // VISA:		13 OR 16
+                            
+                                // Start With;
+                                // AMEX:		34 OR 37
+                                // MASTERCARD:	51, 52, 53, 54 OR 55
+                                // VISA:		4
+                            
+                                // AMEX
+                                if (is_valid && c_length == 15 && (starts_with == 34 || starts_with == 37))
+                                {
+                                    return "AMEX";
+                                } // MASTERCARD
+                                else if (is_valid && c_length == 16 &&
+                                            (starts_with == 51 || starts_with == 52 || starts_with == 53 || starts_with == 54 ||
+                                            starts_with == 55))
+                                {
+                                    return "MASTERCARD";
+                                } // VISA
+                                else if (is_valid && (c_length == 13 || c_length == 16) && starts_with == 4)
+                                {
+                                    return "VISA";
+                                }
+                                else // INVALID CARD
+                                {
+                                    return "INVALID";
+                                }
+                            }
+                            
+                            // Get the sum of individual digits
+                            int get_digit_sum(long n)
+                            {
+                                // Get length of number
+                                int n_length = get_length(n);
+                                int sum = 0;
+                            
+                                // Loop down from total length
+                                for (int i = n_length; i > 0; i--)
+                                {
+                                    // Add digit to sum
+                                    sum += n % 10;
+                            
+                                    // Take digit out of calculation
+                                    n /= 10;
+                                }
+                            
+                                return sum;
+                            }
+                            
+                            // Return first two digits of a given long number
+                            int get_first_two_digits(long n)
+                            {
+                                // Get length of number argument
+                                int n_length = get_length(n);
+                            
+                                // Loop down until first two digits
+                                for (int i = n_length; n > 100; i--)
+                                {
+                                    // Remove 1 digit on each pass
+                                    n /= 10;
+                                }
+                            
+                                // Output double-digits if not VISA; if VISA, output 4
+                                return n >= 40 && n < 50 ? 4 : n;
+                            }
+                            
+                            // Return length of any given number as int
+                            int get_length(long n)
+                            {
+                                int length = 0;
+                                for (int i = 0; n > 0; i++)
+                                {
+                                    // Add 1 to length
+                                    length++;
+                            
+                                    // Remove 1 digit
+                                    n /= 10;
+                                }
+                            
+                                return length;
+                            }
+                            
+                            // Return a sum using Luhn's Algorithm
+                            int get_luhn_sum(long n)
+                            {
+                                // Initialise groups and take away last digit for first group
+                                // ie. 'other' digits from second last; see luhn's algorithm
+                                long n_a = n / 10;
+                                long n_b = n;
+                            
+                                // Get num length to set loop length dynamically
+                                int n_a_length = get_length(n_a);
+                                int n_b_length = get_length(n_b);
+                            
+                                // Initialise sum per group
+                                int sum_a = 0;
+                                int sum_b = 0;
+                            
+                                // Set loop length dynamically
+                                for (int i = n_a_length; i > 0; i--)
+                                {
+                                    // Add last digit * 2 (2nd last in total scope) to first group
+                                    sum_a += get_digit_sum((n_a % 10) * 2);
+                            
+                                    // Take 2 digits off of n_a to get to next desired digit
+                                    n_a /= 100;
+                                }
+                            
+                                for (int i = n_b_length; i > 0; i--)
+                                {
+                                    // Add last digit to sum
+                                    sum_b += get_digit_sum(n_b % 10);
+                            
+                                    // Take 2 digits off of n_b to get to next desired digit
+                                    n_b /= 100;
+                                }
+                            
+                                // Add everything
+                                int sum = sum_a + sum_b;
+                                return sum;
+                            }
+                            
+                            bool validate_card(long n)
+                            {
+                                return get_luhn_sum(n) % 10 == 0 ? true : false;
+                            }
+                        </code>
+                    </pre>
+				</div>
+				<div class="project-outro">
+					<p>
+						So anyway, that's it really. Pretty cool stuff, and I'm
+						keen for next week!
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+		<script src="load-common.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
