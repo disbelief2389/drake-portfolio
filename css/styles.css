@@ -822,7 +822,7 @@ button:active:not(button.no-format) {
 input:focus,
 textarea:focus,
 select:focus,
-button:focus {
+button:focus:not(button#playPauseBtn) {
 	box-shadow: none;
 	outline: 0.2px solid #00ff00; /* Example custom outline */
 	outline-offset: 2px; /* Optional spacing */
