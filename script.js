@@ -130,7 +130,7 @@ const gainNode = audioContext.createGain();
 const audioSource = audioContext.createMediaElementSource(audio);
 // const volumeSlider = document.getElementById('volumeSlider');
 const playPauseBtn = document.getElementById("playPauseBtn");
-const playlist = [{ src: "/data/audio/EndWave_Export_0.wav", start: 0 }];
+const playlist = [{ src: "/data/audio/HowItUsedToBe_1.wav", start: 0 }];
 let currentTrackIndex = 0;
 
 audioSource.connect(gainNode);
