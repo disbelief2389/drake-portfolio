@@ -532,7 +532,8 @@ div.chevron-buttons {
 		padding: 0.5em;
 		border-radius: 50%;
 		&:focus {
-			outline: none;
+			outline: none !important;
+			border: none !important;
 		}
 		&:hover {
 			cursor: pointer;
@@ -543,6 +544,8 @@ div.chevron-buttons {
 		}
 		&:active {
 			background-color: black !important;
+			outline: none;
+			border: none;
 			svg {
 				fill: green !important;
 			}
