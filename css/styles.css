@@ -1293,3 +1293,7 @@ span.date-subtext {
 	font-size: 75%;
 	text-transform: uppercase;
 }
+
+span.indented {
+	margin-left: 2rem;
+}
