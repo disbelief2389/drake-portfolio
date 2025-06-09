@@ -967,7 +967,7 @@ code:not(pre code) {
 }
 
 #profile-pic {
-	max-width: 50%;
+	max-width: 10%;
 	display: block;
 	margin: 10rem auto;
 	border: 1px solid transparent;
