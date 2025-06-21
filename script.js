@@ -130,7 +130,7 @@ const gainNode = audioContext.createGain();
 const audioSource = audioContext.createMediaElementSource(audio);
 // const volumeSlider = document.getElementById('volumeSlider');
 const playPauseBtn = document.getElementById("playPauseBtn");
-const playlist = [{ src: "/data/audio/v3i1ix - indignified.flac", start: 0 }];
+const playlist = [{ src: "/data/audio/cSharpBit.mp3", start: 0 }];
 let currentTrackIndex = 0;
 
 audioSource.connect(gainNode);
